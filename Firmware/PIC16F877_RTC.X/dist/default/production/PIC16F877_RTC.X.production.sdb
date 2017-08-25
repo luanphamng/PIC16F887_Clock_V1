@@ -1,0 +1,316 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F887 ]
+[d frameptr 6 ]
+"6 D:\InstallPackage\01_ToolsForDev\Microchip\XC8 V1.38\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"6 D:\InstallPackage\01_ToolsForDev\Microchip\XC8 V1.38\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"62 D:\InstallPackage\01_ToolsForDev\Microchip\XC8 V1.38\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 D:\InstallPackage\01_ToolsForDev\Microchip\XC8 V1.38\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 D:\InstallPackage\01_ToolsForDev\Microchip\XC8 V1.38\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"56 D:\GoogleDrive\11_Coding\Embedded\PIC\PIC16F887_RTC\Firmware\PIC16F877_RTC.X\delay.c
+[v _DELAY_us DELAY_us `(v  1 e 1 0 ]
+"75
+[v _DELAY_ms DELAY_ms `(v  1 e 1 0 ]
+"87 D:\GoogleDrive\11_Coding\Embedded\PIC\PIC16F887_RTC\Firmware\PIC16F877_RTC.X\i2c.c
+[v _I2C_Init I2C_Init `(v  1 e 1 0 ]
+"118
+[v _I2C_Start I2C_Start `(v  1 e 1 0 ]
+"147
+[v _I2C_Stop I2C_Stop `(v  1 e 1 0 ]
+"179
+[v _I2C_Write I2C_Write `(v  1 e 1 0 ]
+"214
+[v _I2C_Read I2C_Read `(uc  1 e 1 0 ]
+"258
+[v _i2c_WaitForIdle i2c_WaitForIdle `(v  1 s 1 i2c_WaitForIdle ]
+"279
+[v _i2c_Ack i2c_Ack `(v  1 s 1 i2c_Ack ]
+"299
+[v _i2c_NoAck i2c_NoAck `(v  1 s 1 i2c_NoAck ]
+"5 D:\GoogleDrive\11_Coding\Embedded\PIC\PIC16F887_RTC\Firmware\PIC16F877_RTC.X\IC74hc595.c
+[v _vSendData595 vSendData595 `(v  1 e 1 0 ]
+"19 D:\GoogleDrive\11_Coding\Embedded\PIC\PIC16F887_RTC\Firmware\PIC16F877_RTC.X\main.c
+[v _main main `(i  1 e 2 0 ]
+"57 D:\GoogleDrive\11_Coding\Embedded\PIC\PIC16F887_RTC\Firmware\PIC16F877_RTC.X\rtc.c
+[v _RTC_Init RTC_Init `(v  1 e 1 0 ]
+"95
+[v _RTC_SetDateTime RTC_SetDateTime `(v  1 e 1 0 ]
+"131
+[v _RTC_GetDateTime RTC_GetDateTime `(v  1 e 1 0 ]
+[s S152 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"238 D:\InstallPackage\01_ToolsForDev\Microchip\XC8 V1.38\include\pic16f887.h
+[u S161 . 1 `S152 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES161  1 e 1 @6 ]
+[s S226 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"299
+[u S235 . 1 `S226 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES235  1 e 1 @7 ]
+[s S200 . 1 `uc 1 RD0 1 0 :1:0 
+`uc 1 RD1 1 0 :1:1 
+`uc 1 RD2 1 0 :1:2 
+`uc 1 RD3 1 0 :1:3 
+`uc 1 RD4 1 0 :1:4 
+`uc 1 RD5 1 0 :1:5 
+`uc 1 RD6 1 0 :1:6 
+`uc 1 RD7 1 0 :1:7 
+]
+"360
+[u S209 . 1 `S200 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES209  1 e 1 @8 ]
+"822
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
+"828
+[v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
+[s S108 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nRBPU 1 0 :1:7 
+]
+"1330
+[s S115 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+]
+[u S119 . 1 `S108 1 . 1 0 `S115 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES119  1 e 1 @129 ]
+[s S61 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"1457
+[u S70 . 1 `S61 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES70  1 e 1 @134 ]
+[s S19 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1518
+[u S28 . 1 `S19 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES28  1 e 1 @135 ]
+[s S40 . 1 `uc 1 TRISD0 1 0 :1:0 
+`uc 1 TRISD1 1 0 :1:1 
+`uc 1 TRISD2 1 0 :1:2 
+`uc 1 TRISD3 1 0 :1:3 
+`uc 1 TRISD4 1 0 :1:4 
+`uc 1 TRISD5 1 0 :1:5 
+`uc 1 TRISD6 1 0 :1:6 
+`uc 1 TRISD7 1 0 :1:7 
+]
+"1579
+[u S49 . 1 `S40 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES49  1 e 1 @136 ]
+"1999
+[v _SSPADD SSPADD `VEuc  1 e 1 @147 ]
+"2126
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
+[s S82 . 1 `uc 1 WPUB 1 0 :8:0 
+]
+"2314
+[s S84 . 1 `uc 1 WPUB0 1 0 :1:0 
+`uc 1 WPUB1 1 0 :1:1 
+`uc 1 WPUB2 1 0 :1:2 
+`uc 1 WPUB3 1 0 :1:3 
+`uc 1 WPUB4 1 0 :1:4 
+`uc 1 WPUB5 1 0 :1:5 
+`uc 1 WPUB6 1 0 :1:6 
+`uc 1 WPUB7 1 0 :1:7 
+]
+[u S93 . 1 `S82 1 . 1 0 `S84 1 . 1 0 ]
+[v _WPUBbits WPUBbits `VES93  1 e 1 @149 ]
+"2363
+[v _IOCB IOCB `VEuc  1 e 1 @150 ]
+[s S134 . 1 `uc 1 ANS8 1 0 :1:0 
+`uc 1 ANS9 1 0 :1:1 
+`uc 1 ANS10 1 0 :1:2 
+`uc 1 ANS11 1 0 :1:3 
+`uc 1 ANS12 1 0 :1:4 
+`uc 1 ANS13 1 0 :1:5 
+]
+"3390
+[u S141 . 1 `S134 1 . 1 0 ]
+[v _ANSELHbits ANSELHbits `VES141  1 e 1 @393 ]
+"3484
+[v _ACKDT ACKDT `VEb  1 e 0 @1165 ]
+"3486
+[v _ACKEN ACKEN `VEb  1 e 0 @1164 ]
+"3536
+[v _BF BF `VEb  1 e 0 @1184 ]
+"3804
+[v _PEN PEN `VEb  1 e 0 @1162 ]
+"3886
+[v _RCEN RCEN `VEb  1 e 0 @1163 ]
+"3926
+[v _RSEN RSEN `VEb  1 e 0 @1161 ]
+"3932
+[v _R_W R_W `VEb  1 e 0 @1186 ]
+"3942
+[v _SEN SEN `VEb  1 e 0 @1160 ]
+"4080
+[v _TRISC3 TRISC3 `VEb  1 e 0 @1083 ]
+"4082
+[v _TRISC4 TRISC4 `VEb  1 e 0 @1084 ]
+"40 D:\GoogleDrive\11_Coding\Embedded\PIC\PIC16F887_RTC\Firmware\PIC16F877_RTC.X\IC74hc595.h
+[v _ucBCD_ARR ucBCD_ARR `[10]uc  1 e 10 0 ]
+"19 D:\GoogleDrive\11_Coding\Embedded\PIC\PIC16F887_RTC\Firmware\PIC16F877_RTC.X\main.c
+[v _main main `(i  1 e 2 0 ]
+{
+[s S173 . 7 `uc 1 sec 1 0 `uc 1 min 1 1 `uc 1 hour 1 2 `uc 1 weekDay 1 3 `uc 1 date 1 4 `uc 1 month 1 5 `uc 1 year 1 6 ]
+"61
+[v main@rtc rtc `S173  1 a 7 8 ]
+"56
+[v main@ucSetCnt ucSetCnt `uc  1 a 1 7 ]
+"53
+[v main@ucYear ucYear `uc  1 a 1 6 ]
+"52
+[v main@ucMonth ucMonth `uc  1 a 1 5 ]
+"51
+[v main@ucDate ucDate `uc  1 a 1 4 ]
+"50
+[v main@ucHours ucHours `uc  1 a 1 3 ]
+"49
+[v main@ucMin ucMin `uc  1 a 1 2 ]
+"48
+[v main@ucSec ucSec `uc  1 a 1 1 ]
+"55
+[v main@ucSetData ucSetData `uc  1 a 1 0 ]
+"187
+} 0
+"5 D:\GoogleDrive\11_Coding\Embedded\PIC\PIC16F887_RTC\Firmware\PIC16F877_RTC.X\IC74hc595.c
+[v _vSendData595 vSendData595 `(v  1 e 1 0 ]
+{
+[v vSendData595@x x `uc  1 a 1 wreg ]
+"9
+[v vSendData595@temp temp `uc  1 a 1 5 ]
+[v vSendData595@i i `uc  1 a 1 4 ]
+"5
+[v vSendData595@x x `uc  1 a 1 wreg ]
+"11
+[v vSendData595@x x `uc  1 a 1 3 ]
+"32
+} 0
+"95 D:\GoogleDrive\11_Coding\Embedded\PIC\PIC16F887_RTC\Firmware\PIC16F877_RTC.X\rtc.c
+[v _RTC_SetDateTime RTC_SetDateTime `(v  1 e 1 0 ]
+{
+[s S173 . 7 `uc 1 sec 1 0 `uc 1 min 1 1 `uc 1 hour 1 2 `uc 1 weekDay 1 3 `uc 1 date 1 4 `uc 1 month 1 5 `uc 1 year 1 6 ]
+[v RTC_SetDateTime@rtc rtc `*.4S173  1 a 1 wreg ]
+[v RTC_SetDateTime@rtc rtc `*.4S173  1 a 1 wreg ]
+"97
+"95
+[v RTC_SetDateTime@rtc rtc `*.4S173  1 a 1 1 ]
+"111
+} 0
+"57
+[v _RTC_Init RTC_Init `(v  1 e 1 0 ]
+{
+"68
+} 0
+"87 D:\GoogleDrive\11_Coding\Embedded\PIC\PIC16F887_RTC\Firmware\PIC16F877_RTC.X\i2c.c
+[v _I2C_Init I2C_Init `(v  1 e 1 0 ]
+{
+"95
+} 0
+"131 D:\GoogleDrive\11_Coding\Embedded\PIC\PIC16F887_RTC\Firmware\PIC16F877_RTC.X\rtc.c
+[v _RTC_GetDateTime RTC_GetDateTime `(v  1 e 1 0 ]
+{
+[s S173 . 7 `uc 1 sec 1 0 `uc 1 min 1 1 `uc 1 hour 1 2 `uc 1 weekDay 1 3 `uc 1 date 1 4 `uc 1 month 1 5 `uc 1 year 1 6 ]
+[v RTC_GetDateTime@rtc rtc `*.4S173  1 a 1 wreg ]
+[v RTC_GetDateTime@rtc rtc `*.4S173  1 a 1 wreg ]
+"133
+"131
+[v RTC_GetDateTime@rtc rtc `*.4S173  1 a 1 4 ]
+"152
+} 0
+"179 D:\GoogleDrive\11_Coding\Embedded\PIC\PIC16F887_RTC\Firmware\PIC16F877_RTC.X\i2c.c
+[v _I2C_Write I2C_Write `(v  1 e 1 0 ]
+{
+[v I2C_Write@v_i2cData_u8 v_i2cData_u8 `uc  1 a 1 wreg ]
+[v I2C_Write@v_i2cData_u8 v_i2cData_u8 `uc  1 a 1 wreg ]
+"183
+[v I2C_Write@v_i2cData_u8 v_i2cData_u8 `uc  1 a 1 0 ]
+"186
+} 0
+"147
+[v _I2C_Stop I2C_Stop `(v  1 e 1 0 ]
+{
+"151
+} 0
+"118
+[v _I2C_Start I2C_Start `(v  1 e 1 0 ]
+{
+"123
+} 0
+"214
+[v _I2C_Read I2C_Read `(uc  1 e 1 0 ]
+{
+[v I2C_Read@v_ackOption_u8 v_ackOption_u8 `uc  1 a 1 wreg ]
+"216
+[v I2C_Read@v_i2cData_u8 v_i2cData_u8 `uc  1 a 1 2 ]
+"214
+[v I2C_Read@v_ackOption_u8 v_ackOption_u8 `uc  1 a 1 wreg ]
+"216
+[v I2C_Read@v_ackOption_u8 v_ackOption_u8 `uc  1 a 1 1 ]
+"233
+} 0
+"258
+[v _i2c_WaitForIdle i2c_WaitForIdle `(v  1 s 1 i2c_WaitForIdle ]
+{
+"262
+} 0
+"299
+[v _i2c_NoAck i2c_NoAck `(v  1 s 1 i2c_NoAck ]
+{
+"304
+} 0
+"279
+[v _i2c_Ack i2c_Ack `(v  1 s 1 i2c_Ack ]
+{
+"284
+} 0
+"75 D:\GoogleDrive\11_Coding\Embedded\PIC\PIC16F887_RTC\Firmware\PIC16F877_RTC.X\delay.c
+[v _DELAY_ms DELAY_ms `(v  1 e 1 0 ]
+{
+[v DELAY_ms@ms_count ms_count `ui  1 p 2 2 ]
+"82
+} 0
+"56
+[v _DELAY_us DELAY_us `(v  1 e 1 0 ]
+{
+[v DELAY_us@us_count us_count `ui  1 p 2 0 ]
+"62
+} 0
