@@ -10,10 +10,41 @@
 #include "rtc.h"
 #include "delay.h"
 #include "IC74hc595.h"
+#include <xc.h>
 
-#define _XTAL_FREQ 8000000
+
+
+// PIC16F887 Configuration Bit Settings
+//
+
+#define _XTAL_FREQ 16000000
 #define INCREASE 1
 #define DECCREASE 0
+#define ON 1
+#define OFF 0
+
+#define LED_MINUTE_UNIT     0xDF
+#define LED_MINUTE_DOZEN    0xEF
+#define LED_HOUR_UINT       0xF7
+#define LED_HOUR_DOZEN      0xFB
+#define LED_CLEAR           0x3C    /*  Clear all LED   */
+#define DELAY_BTW_LED       5
+
+uint8_t ReverserByte(uint8_t ui8Input)
+{
+    uint8_t ui8Tmp;
+    uint8_t ui8Tmp2;
+    for(ui8Tmp2 = 0; ui8Tmp2 <= 8; ui8Tmp2++)
+    {
+        if((ui8Input && 0b00000001) == 1)
+            ui8Tmp |= 0x01;
+            
+        ui8Input >>= 1;
+        ui8Tmp <<= 1;
+    }
+    
+    return ui8Tmp;
+}
 
 
 int main() 
@@ -23,13 +54,19 @@ int main()
     TRISCbits.TRISC5 = 0;
     TRISCbits.TRISC6 = 0;
     TRISCbits.TRISC7 = 0;
-    TRISDbits.TRISD0 = 0;
-    TRISDbits.TRISD1 = 0;
+    
+    TRISD = 0x00;
     
     TRISBbits.TRISB0 = 1;
     TRISBbits.TRISB1 = 1; // Increase button
-    TRISBbits.TRISB2 = 1; // Decrease button
-    TRISBbits.TRISB7 = 0; // Test output
+    TRISBbits.TRISB2 = 0; 
+    TRISBbits.TRISB3 = 0;
+    TRISBbits.TRISB4 = 0;
+    TRISBbits.TRISB5 = 0;
+    
+    TRISBbits.TRISB7 = 0; 
+    
+    TRISEbits.TRISE0 = 0;
     
     WPUBbits.WPUB0 = 1;
     WPUBbits.WPUB1 = 1;
@@ -38,11 +75,15 @@ int main()
     
     ANSELHbits.ANS12 = 0;   //Disable Anolog for RB0, RB1, RB2
     ANSELHbits.ANS10 = 0;
+    ANSELHbits.ANS13 = 0;   //Disable Anolog for RB0, RB1, RB2
+    ANSELHbits.ANS11 = 0;
+    ANSELHbits.ANS9 = 0;
     ANSELHbits.ANS8 = 0;
+    ANSELbits.ANS5 = 0;
     
     IOCB = 0x00;// Disable interrupt on change
 // *****************************************************************************    
-    PORTBbits.RB7 = 1;
+    PORTB = 0xFF;
 // *****************************************************************************    
 // Define new variables    
     uint8_t ucSec;
@@ -78,9 +119,9 @@ int main()
 
 // *****************************************************************************
 // New time to be written to DS1307    
-    rtc.hour = 0x23; //  10:40:20 am
-    rtc.min =  0x59;
-    rtc.sec =  0x56;
+    rtc.hour = 0x00; //  10:40:20 am
+    rtc.min =  0x08;
+    rtc.sec =  0x30;
 
     rtc.date = 0x31; //1st Jan 2016
     rtc.month = 0x12;
@@ -93,60 +134,12 @@ int main()
     RTC_SetDateTime(&rtc);  //  10:40:20 am, 1st Jan 2016
 
     /* Display the Time and Date continuously */
+    PORTBbits.RB5 = 1;
+    PORTBbits.RB4 = 1;
     while(1)
     { 
-        if(PORTBbits.RB0 == 0)
-        {
-            DELAY_ms(50);
-            if(PORTBbits.RB0 == 0)
-            {
-                ucSetCnt++;
-                if(ucSetCnt > 6)
-                {
-                    ucSetCnt = 0;
-                }
-            } 
-        }
-        
-        if(ucSetCnt)
-        {
-             // if Decrease button was pressed
-            if(PORTBbits.RB2 == 0)
-            {
-                DELAY_ms(50);
-                if(PORTBbits.RB2 == 0)
-                {
-                    ucSetData =  DECCREASE;                    
-                    PORTBbits.RB7 = 0;
-                } 
-            }
-            else
-            {
-                //Nothing
-            }
-            
-            // If increase button was pressed        
-            if(PORTBbits.RB1 == 0)
-            {
-                DELAY_ms(50);
-                if(PORTBbits.RB1 == 0)
-                {
-                    ucSetData = INCREASE;
-                    PORTBbits.RB7 = 1;
-                } 
-            }
-            else
-            {
-                //Nothing
-            }                                  
-        }
-        else
-        {
-            //Do nothing if ucSetCnt == 0;
-        }
-        
+     
         RTC_GetDateTime(&rtc);
-        LED1 = 1; LED2 = 1;
         ucSec = rtc.sec;   
         ucMin = rtc.min;        
         ucHours = rtc.hour;        
@@ -154,33 +147,28 @@ int main()
         ucMonth = rtc.month;        
         ucYear = rtc.year;        
         
+        
                 
-        vSendData595(~ucBCD_ARR[(ucSec & 0xF0) >> 4]);
-        vSendData595(~ucBCD_ARR[(ucMin & 0xF0) >> 4]);
-        vSendData595(~ucBCD_ARR[(ucHours & 0xF0) >> 4]);
-        vSendData595(~ucBCD_ARR[(ucYear & 0xF0) >> 4]);
-        vSendData595(~ucBCD_ARR[(ucMonth & 0xF0) >> 4]);
-        vSendData595(~ucBCD_ARR[(ucDate & 0xF0) >> 4]);        
-        SCL_595 = 0;
-        DELAY_us(10);
-        SCL_595 = 1;
         
-        LED1 = 0; LED2 = 1;
-        DELAY_ms(5);
+        PORTD = ucBCD_ARR[ucSec&0x0F];        
+        PORTB |= LED_CLEAR;
+        PORTB &= LED_MINUTE_UNIT;
+        DELAY_ms(DELAY_BTW_LED);        
         
-        LED2 = 1; LED1 = 1;
-        vSendData595(~ucBCD_ARR[ucSec & 0x0F]);
-        vSendData595(~ucBCD_ARR[ucMin & 0x0F]);
-        vSendData595(~ucBCD_ARR[ucHours & 0x0F]);
-        vSendData595(~ucBCD_ARR[ucYear & 0x0F]);
-        vSendData595(~ucBCD_ARR[ucMonth & 0x0F]);
-        vSendData595(~ucBCD_ARR[ucDate & 0x0F]);        
-        SCL_595 = 0;
-        DELAY_us(10);
-        SCL_595 = 1;
+        PORTD = ucBCD_ARR[(ucSec&0xF0) >> 4];        
+        PORTB |= LED_CLEAR;
+        PORTB &= LED_MINUTE_DOZEN;
+        DELAY_ms(DELAY_BTW_LED);        
         
-        LED1 = 1; LED2 = 0;
-        DELAY_ms(5);
+        PORTD = ucBCD_ARR[ucMin&0x0F];        
+        PORTB |= LED_CLEAR;
+        PORTB &= LED_HOUR_UINT;
+        DELAY_ms(DELAY_BTW_LED);        
+        
+        PORTD = ucBCD_ARR[(ucMin&0xF0) >> 4];        
+        PORTB |= LED_CLEAR;
+        PORTB &= LED_HOUR_DOZEN;        
+        DELAY_ms(DELAY_BTW_LED);        
     }
 
     return (0);

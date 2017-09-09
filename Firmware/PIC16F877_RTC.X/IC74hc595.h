@@ -14,8 +14,6 @@
 
 
 // *****************************************************************************
-#define _XTAL_FREQ 8000000
-
 
 #define DATA_595 PORTCbits.RC5
 #define SCK_595  PORTCbits.RC6
@@ -37,7 +35,7 @@ extern "C" {
 }
 #endif
 
-unsigned char ucBCD_ARR[10]= {0xC0,0xF9,0xA4,0xB0,0x99,0x92,0x82,0xF8,0x80,0x90};
+unsigned char ucBCD_ARR[10]= {0xFC,0x60,0xDA,0xF2,0x66,0xB6,0xBE,0xE0,0xFE,0xF6};
 // *****************************************************************************
 void vSendData595(unsigned char x);
 unsigned char Binary2BCD(unsigned char a);
