@@ -1,14 +1,53 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"294 /usr/microchip/xc8/v1.43/include/pic16f887.h
-[s S10 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S10 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
-"293
-[u S9 `S10 1 ]
-[n S9 . . ]
+"350 /usr/microchip/xc8/v1.43/include/pic16f887.h
+[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
+"226
+[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
+"68 delay.h
+[v _DELAY_ms `(v ~T0 @X0 0 ef1`ui ]
+[; ;stdutils.h: 68: typedef signed char sint8_t;
+[; ;stdutils.h: 69: typedef unsigned char uint8_t;
+[; ;stdutils.h: 71: typedef signed int sint16_t;
+[; ;stdutils.h: 72: typedef unsigned int uint16_t;
+[; ;stdutils.h: 74: typedef signed long int sint32_t;
+[; ;stdutils.h: 75: typedef unsigned long int uint32_t;
+[; ;stdutils.h: 180: typedef enum
+[; ;stdutils.h: 181: {
+[; ;stdutils.h: 182: E_FALSE,
+[; ;stdutils.h: 183: E_TRUE
+[; ;stdutils.h: 184: }Boolean_et;
+[; ;stdutils.h: 187: typedef enum
+[; ;stdutils.h: 188: {
+[; ;stdutils.h: 189: E_FAILED,
+[; ;stdutils.h: 190: E_SUCCESS,
+[; ;stdutils.h: 191: E_BUSY,
+[; ;stdutils.h: 192: E_TIMEOUT
+[; ;stdutils.h: 193: }Status_et;
+[; ;stdutils.h: 196: typedef enum
+[; ;stdutils.h: 197: {
+[; ;stdutils.h: 198: E_BINARY=2,
+[; ;stdutils.h: 199: E_DECIMAL = 10,
+[; ;stdutils.h: 200: E_HEX = 16
+[; ;stdutils.h: 201: }NumericSystem_et;
+"302 stdutils.h
+[p x FOSC=HS ]
+"303
+[p x WDTE=OFF ]
+"304
+[p x PWRTE=OFF ]
 "305
-[v _PORTCbits `VS9 ~T0 @X0 0 e@7 ]
-"67 delay.h
-[v _DELAY_us `(v ~T0 @X0 0 ef1`ui ]
+[p x BOREN=OFF ]
+"306
+[p x LVP=OFF ]
+"307
+[p x CPD=OFF ]
+"308
+[p x WRT=OFF ]
+"309
+[p x CP=OFF ]
+[; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
+[; ;htc.h: 28: extern double __fpnormalize(double);
+[; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
 [; ;pic16f887.h: 50: extern volatile unsigned char INDF @ 0x000;
 "52 /usr/microchip/xc8/v1.43/include/pic16f887.h
 [; ;pic16f887.h: 52: asm("INDF equ 00h");
@@ -1479,9 +1518,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic16f887.h: 4300: extern volatile __bit nTX8 @ (((unsigned) &TXSTA)*8) + 6;
 [; ;pic16f887.h: 4302: extern volatile __bit nW @ (((unsigned) &SSPSTAT)*8) + 2;
 [; ;pic16f887.h: 4304: extern volatile __bit nWRITE @ (((unsigned) &SSPSTAT)*8) + 2;
-[; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
-[; ;htc.h: 28: extern double __fpnormalize(double);
-[; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
 [; ;pic.h: 28: extern void __nop(void);
 [; ;pic.h: 77: extern unsigned int flash_read(unsigned short addr);
 [; ;eeprom_routines.h: 114: extern void eeprom_write(unsigned char addr, unsigned char value);
@@ -1493,177 +1529,160 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 192: extern unsigned char __resetbits;
 [; ;pic.h: 193: extern __bit __powerdown;
 [; ;pic.h: 194: extern __bit __timeout;
-[; ;IC74hc595.h: 39: void vSendData595(unsigned char x);
-[; ;IC74hc595.h: 40: unsigned char Binary2BCD(unsigned char a);
-[; ;stdutils.h: 68: typedef signed char sint8_t;
-[; ;stdutils.h: 69: typedef unsigned char uint8_t;
-[; ;stdutils.h: 71: typedef signed int sint16_t;
-[; ;stdutils.h: 72: typedef unsigned int uint16_t;
-[; ;stdutils.h: 74: typedef signed long int sint32_t;
-[; ;stdutils.h: 75: typedef unsigned long int uint32_t;
-[; ;stdutils.h: 180: typedef enum
-[; ;stdutils.h: 181: {
-[; ;stdutils.h: 182: E_FALSE,
-[; ;stdutils.h: 183: E_TRUE
-[; ;stdutils.h: 184: }Boolean_et;
-[; ;stdutils.h: 187: typedef enum
-[; ;stdutils.h: 188: {
-[; ;stdutils.h: 189: E_FAILED,
-[; ;stdutils.h: 190: E_SUCCESS,
-[; ;stdutils.h: 191: E_BUSY,
-[; ;stdutils.h: 192: E_TIMEOUT
-[; ;stdutils.h: 193: }Status_et;
-[; ;stdutils.h: 196: typedef enum
-[; ;stdutils.h: 197: {
-[; ;stdutils.h: 198: E_BINARY=2,
-[; ;stdutils.h: 199: E_DECIMAL = 10,
-[; ;stdutils.h: 200: E_HEX = 16
-[; ;stdutils.h: 201: }NumericSystem_et;
-"302 stdutils.h
-[p x FOSC=HS ]
-"303
-[p x WDTE=OFF ]
-"304
-[p x PWRTE=OFF ]
-"305
-[p x BOREN=OFF ]
-"306
-[p x LVP=OFF ]
-"307
-[p x CPD=OFF ]
-"308
-[p x WRT=OFF ]
-"309
-[p x CP=OFF ]
+"71 userdefine.h
+[v _ucBCD_ARR `uc ~T0 @X0 -> 10 `i e ]
+[i _ucBCD_ARR
+:U ..
+-> -> 252 `i `uc
+-> -> 96 `i `uc
+-> -> 218 `i `uc
+-> -> 242 `i `uc
+-> -> 102 `i `uc
+-> -> 182 `i `uc
+-> -> 190 `i `uc
+-> -> 224 `i `uc
+-> -> 254 `i `uc
+-> -> 246 `i `uc
+..
+]
+[; ;userdefine.h: 71: unsigned char ucBCD_ARR[10]= {0xFC,0x60,0xDA,0xF2,0x66,0xB6,0xBE,0xE0,0xFE,0xF6};
 [; ;delay.h: 67: void DELAY_us(uint16_t us_count);
 [; ;delay.h: 68: void DELAY_ms(uint16_t ms_count);
 [; ;delay.h: 69: void DELAY_sec(uint16_t var_delaySecCount_u16);
-"5 IC74hc595.c
-[v _vSendData595 `(v ~T0 @X0 1 ef1`uc ]
-"6
-{
-[; ;IC74hc595.c: 5: void vSendData595(unsigned char x)
-[; ;IC74hc595.c: 6: {
-[e :U _vSendData595 ]
-"5
-[v _x `uc ~T0 @X0 1 r1 ]
-"6
-[f ]
-"9
-[v _i `uc ~T0 @X0 1 a ]
-[v _temp `uc ~T0 @X0 1 a ]
-[; ;IC74hc595.c: 9: unsigned char i, temp;
-[; ;IC74hc595.c: 11: for(i=0;i<8;i++)
-"11
-{
-[e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 8 `i 139  ]
-[e $U 140  ]
-"12
-[e :U 139 ]
-[; ;IC74hc595.c: 12: {
-{
-[; ;IC74hc595.c: 13: temp=x;
+[; ;display.h: 48: uint8_t ui8Dec2HexDisplay(uint8_t ui8Input);
+[; ;display.h: 49: uint8_t ui8Hex2DECDisplay(uint8_t ui8Input);
+[; ;display.h: 50: void vDisplay(uint8_t ui8First, uint8_t ui8Second, uint8_t ui8Thrd, uint8_t ui8Fourth);
+"12 display.c
+[v _vDisplay `(v ~T0 @X0 1 ef4`uc`uc`uc`uc ]
 "13
-[e = _temp _x ]
-[; ;IC74hc595.c: 14: temp=temp&0x80;
+{
+[; ;display.c: 12: void vDisplay(uint8_t ui8First, uint8_t ui8Second, uint8_t ui8Thrd, uint8_t ui8Fourth)
+[; ;display.c: 13: {
+[e :U _vDisplay ]
+"12
+[v _ui8First `uc ~T0 @X0 1 r1 ]
+[v _ui8Second `uc ~T0 @X0 1 r2 ]
+[v _ui8Thrd `uc ~T0 @X0 1 r3 ]
+[v _ui8Fourth `uc ~T0 @X0 1 r4 ]
+"13
+[f ]
+[; ;display.c: 14: PORTD = ucBCD_ARR[ui8Fourth];
 "14
-[e = _temp -> & -> _temp `i -> 128 `i `uc ]
-[; ;IC74hc595.c: 15: if(temp==0x80)
+[e = _PORTD *U + &U _ucBCD_ARR * -> _ui8Fourth `ux -> -> # *U &U _ucBCD_ARR `ui `ux ]
+[; ;display.c: 15: PORTB |= 0x3C;
 "15
-[e $ ! == -> _temp `i -> 128 `i 142  ]
-[; ;IC74hc595.c: 16: {
+[e =| _PORTB -> -> 60 `i `uc ]
+[; ;display.c: 16: PORTB &= 0xDF;
 "16
-{
-[; ;IC74hc595.c: 17: PORTCbits.RC5=1;
+[e =& _PORTB -> -> 223 `i `uc ]
+[; ;display.c: 17: DELAY_ms(5);
 "17
-[e = . . _PORTCbits 0 5 -> -> 1 `i `uc ]
-"18
-}
-[; ;IC74hc595.c: 18: }
-[e $U 143  ]
+[e ( _DELAY_ms (1 -> -> 5 `i `ui ]
+[; ;display.c: 19: PORTD = ucBCD_ARR[ui8Thrd];
 "19
-[e :U 142 ]
-[; ;IC74hc595.c: 19: else
-[; ;IC74hc595.c: 20: {
+[e = _PORTD *U + &U _ucBCD_ARR * -> _ui8Thrd `ux -> -> # *U &U _ucBCD_ARR `ui `ux ]
+[; ;display.c: 20: PORTB |= 0x3C;
 "20
-{
-[; ;IC74hc595.c: 21: PORTCbits.RC5=0;
+[e =| _PORTB -> -> 60 `i `uc ]
+[; ;display.c: 21: PORTB &= 0xEF;
 "21
-[e = . . _PORTCbits 0 5 -> -> 0 `i `uc ]
+[e =& _PORTB -> -> 239 `i `uc ]
+[; ;display.c: 22: DELAY_ms(5);
 "22
-}
-[e :U 143 ]
-[; ;IC74hc595.c: 22: }
-[; ;IC74hc595.c: 23: x <<= 1;
-"23
-[e =<< _x -> 1 `i ]
-[; ;IC74hc595.c: 25: PORTCbits.RC6 = 0;
+[e ( _DELAY_ms (1 -> -> 5 `i `ui ]
+[; ;display.c: 24: PORTD = ucBCD_ARR[ui8Second];
+"24
+[e = _PORTD *U + &U _ucBCD_ARR * -> _ui8Second `ux -> -> # *U &U _ucBCD_ARR `ui `ux ]
+[; ;display.c: 25: PORTB |= 0x3C;
 "25
-[e = . . _PORTCbits 0 6 -> -> 0 `i `uc ]
-[; ;IC74hc595.c: 26: DELAY_us(10);
+[e =| _PORTB -> -> 60 `i `uc ]
+[; ;display.c: 26: PORTB &= 0xF7;
 "26
-[e ( _DELAY_us (1 -> -> 10 `i `ui ]
-[; ;IC74hc595.c: 27: PORTCbits.RC6 = 1;
+[e =& _PORTB -> -> 247 `i `uc ]
+[; ;display.c: 27: DELAY_ms(5);
 "27
-[e = . . _PORTCbits 0 6 -> -> 1 `i `uc ]
-"28
-}
-"11
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 8 `i 139  ]
-[e :U 140 ]
-"28
-}
-[; ;IC74hc595.c: 28: }
-[; ;IC74hc595.c: 32: }
+[e ( _DELAY_ms (1 -> -> 5 `i `ui ]
+[; ;display.c: 29: PORTD = ucBCD_ARR[ui8First];
+"29
+[e = _PORTD *U + &U _ucBCD_ARR * -> _ui8First `ux -> -> # *U &U _ucBCD_ARR `ui `ux ]
+[; ;display.c: 30: PORTB |= 0x3C;
+"30
+[e =| _PORTB -> -> 60 `i `uc ]
+[; ;display.c: 31: PORTB &= 0xFB;
+"31
+[e =& _PORTB -> -> 251 `i `uc ]
+[; ;display.c: 32: DELAY_ms(5);
 "32
+[e ( _DELAY_ms (1 -> -> 5 `i `ui ]
+[; ;display.c: 33: }
+"33
 [e :UE 138 ]
 }
 "35
-[v _Binary2BCD `(uc ~T0 @X0 1 ef1`uc ]
+[v _ui8Dec2HexDisplay `(uc ~T0 @X0 1 ef1`uc ]
 "36
 {
-[; ;IC74hc595.c: 35: unsigned char Binary2BCD(unsigned char a)
-[; ;IC74hc595.c: 36: {
-[e :U _Binary2BCD ]
+[; ;display.c: 35: uint8_t ui8Dec2HexDisplay(uint8_t ui8Input)
+[; ;display.c: 36: {
+[e :U _ui8Dec2HexDisplay ]
 "35
-[v _a `uc ~T0 @X0 1 r1 ]
+[v _ui8Input `uc ~T0 @X0 1 r1 ]
 "36
 [f ]
 "37
-[v _t1 `uc ~T0 @X0 1 a ]
-[v _t2 `uc ~T0 @X0 1 a ]
-[; ;IC74hc595.c: 37: unsigned char t1, t2;
-[; ;IC74hc595.c: 38: t1 = a%10;
+[v _ui8Output `uc ~T0 @X0 1 a ]
 "38
-[e = _t1 -> % -> _a `i -> 10 `i `uc ]
-[; ;IC74hc595.c: 39: t1 = t1 & 0x0F;
-"39
-[e = _t1 -> & -> _t1 `i -> 15 `i `uc ]
-[; ;IC74hc595.c: 40: a = a/10;
+[v _ui8Temp `uc ~T0 @X0 1 a ]
+[; ;display.c: 37: uint8_t ui8Output;
+[; ;display.c: 38: uint8_t ui8Temp;
+[; ;display.c: 40: ui8Temp = (uint8_t)ui8Input/10;
 "40
-[e = _a -> / -> _a `i -> 10 `i `uc ]
-[; ;IC74hc595.c: 41: t2 = a%10;
+[e = _ui8Temp -> / -> _ui8Input `i -> 10 `i `uc ]
+[; ;display.c: 41: ui8Output = ui8Temp;
 "41
-[e = _t2 -> % -> _a `i -> 10 `i `uc ]
-[; ;IC74hc595.c: 42: t2 = 0x0F & t2;
+[e = _ui8Output _ui8Temp ]
+[; ;display.c: 42: ui8Output <<= 4;
 "42
-[e = _t2 -> & -> 15 `i -> _t2 `i `uc ]
-[; ;IC74hc595.c: 43: t2 = t2 << 4;
-"43
-[e = _t2 -> << -> _t2 `i -> 4 `i `uc ]
-[; ;IC74hc595.c: 44: t2 = 0xF0 & t2;
+[e =<< _ui8Output -> 4 `i ]
+[; ;display.c: 44: ui8Temp = (uint8_t)ui8Input%10;
 "44
-[e = _t2 -> & -> 240 `i -> _t2 `i `uc ]
-[; ;IC74hc595.c: 45: t1 = t1 | t2;
+[e = _ui8Temp -> % -> _ui8Input `i -> 10 `i `uc ]
+[; ;display.c: 45: ui8Output |= ui8Temp;
 "45
-[e = _t1 -> | -> _t1 `i -> _t2 `i `uc ]
-[; ;IC74hc595.c: 46: return t1;
-"46
-[e ) _t1 ]
-[e $UE 144  ]
-[; ;IC74hc595.c: 47: }
+[e =| _ui8Output _ui8Temp ]
+[; ;display.c: 47: return ui8Output;
 "47
-[e :UE 144 ]
+[e ) _ui8Output ]
+[e $UE 139  ]
+[; ;display.c: 48: }
+"48
+[e :UE 139 ]
+}
+"50
+[v _ui8Hex2DECDisplay `(uc ~T0 @X0 1 ef1`uc ]
+"51
+{
+[; ;display.c: 50: uint8_t ui8Hex2DECDisplay(uint8_t ui8Input)
+[; ;display.c: 51: {
+[e :U _ui8Hex2DECDisplay ]
+"50
+[v _ui8Input `uc ~T0 @X0 1 r1 ]
+"51
+[f ]
+"53
+[v _ui8Temp `uc ~T0 @X0 1 a ]
+[; ;display.c: 53: uint8_t ui8Temp;
+[; ;display.c: 54: ui8Temp = ui8Input & 0xF0;
+"54
+[e = _ui8Temp -> & -> _ui8Input `i -> 240 `i `uc ]
+[; ;display.c: 55: ui8Temp >>= 4;
+"55
+[e =>> _ui8Temp -> 4 `i ]
+[; ;display.c: 56: return ((ui8Temp * 10) + (ui8Input & 0x0F));
+"56
+[e ) -> + * -> _ui8Temp `i -> 10 `i & -> _ui8Input `i -> 15 `i `uc ]
+[e $UE 140  ]
+[; ;display.c: 57: }
+"57
+[e :UE 140 ]
 }

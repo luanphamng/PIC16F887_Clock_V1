@@ -3,12 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/userdefine.h</file>
             <file>file:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/stdutils.h</file>
             <file>file:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/delay.h</file>
+            <file>file:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.h</file>
             <file>file:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/IC74hc595.h</file>
+            <file>file:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c</file>
             <file>file:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.h</file>
             <file>file:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c</file>
             <file>file:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.h</file>
+            <file>file:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c</file>
         </group>
     </open-files>
 </project-private>

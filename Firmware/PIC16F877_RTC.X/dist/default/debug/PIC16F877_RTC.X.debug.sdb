@@ -203,21 +203,21 @@
 [v main@rtc rtc `S167  1 a 7 14 ]
 "70
 [v main@ui8SetValue ui8SetValue `uc  1 a 1 13 ]
-"69
-[v main@ui8SetMode ui8SetMode `uc  1 a 1 12 ]
 "66
-[v main@ucMonth ucMonth `uc  1 a 1 11 ]
+[v main@ucMonth ucMonth `uc  1 a 1 12 ]
 "65
-[v main@ucDate ucDate `uc  1 a 1 10 ]
+[v main@ucDate ucDate `uc  1 a 1 11 ]
 "64
-[v main@ucHours ucHours `uc  1 a 1 9 ]
+[v main@ucHours ucHours `uc  1 a 1 10 ]
 "63
-[v main@ucMin ucMin `uc  1 a 1 8 ]
+[v main@ucMin ucMin `uc  1 a 1 9 ]
 "62
-[v main@ucSec ucSec `uc  1 a 1 7 ]
+[v main@ucSec ucSec `uc  1 a 1 8 ]
+"69
+[v main@ui8SetMode ui8SetMode `uc  1 a 1 7 ]
 "67
 [v main@ucYear ucYear `uc  1 a 1 6 ]
-"269
+"256
 } 0
 "12 /media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
 [v _vDisplay vDisplay `(v  1 e 1 0 ]

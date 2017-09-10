@@ -2181,30 +2181,15 @@ void DELAY_us(uint16_t us_count);
 void DELAY_ms(uint16_t ms_count);
 void DELAY_sec(uint16_t var_delaySecCount_u16);
 
-# 38 "IC74hc595.h"
+# 71 "userdefine.h"
 unsigned char ucBCD_ARR[10]= {0xFC,0x60,0xDA,0xF2,0x66,0xB6,0xBE,0xE0,0xFE,0xF6};
 
-void vSendData595(unsigned char x);
-unsigned char Binary2BCD(unsigned char a);
+# 48 "display.h"
+uint8_t ui8Dec2HexDisplay(uint8_t ui8Input);
+uint8_t ui8Hex2DECDisplay(uint8_t ui8Input);
+void vDisplay(uint8_t ui8First, uint8_t ui8Second, uint8_t ui8Thrd, uint8_t ui8Fourth);
 
-# 33 "main.c"
-uint8_t ReverserByte(uint8_t ui8Input)
-{
-uint8_t ui8Tmp;
-uint8_t ui8Tmp2;
-for(ui8Tmp2 = 0; ui8Tmp2 <= 8; ui8Tmp2++)
-{
-if((ui8Input && 0b00000001) == 1)
-ui8Tmp |= 0x01;
-
-ui8Input >>= 1;
-ui8Tmp <<= 1;
-}
-
-return ui8Tmp;
-}
-
-
+# 23 "main.c"
 int main()
 {
 
@@ -2251,11 +2236,8 @@ uint8_t ucDate;
 uint8_t ucMonth;
 uint8_t ucYear;
 
-uint8_t ucSetData;
-uint8_t ucSetCnt;
-
-
-
+uint8_t ui8SetMode;
+uint8_t ui8SetValue;
 
 rtc_t rtc;
 
@@ -2268,9 +2250,8 @@ ucDate = 0;
 ucMonth = 0;
 ucYear = 0;
 
-ucSetData = 0;
-ucSetCnt = 0;
-
+ui8SetMode = 0;
+ui8SetValue = 0;
 
 
 RTC_Init();
@@ -2286,47 +2267,167 @@ rtc.month = 0x12;
 rtc.year = 0x16;
 rtc.weekDay = 5;
 
-
-
-
-RTC_SetDateTime(&rtc);
-
-
-PORTBbits.RB5 = 1;
-PORTBbits.RB4 = 1;
+# 106
 while(1)
 {
 
+
+if(PORTBbits.RB1 == 0)
+{
+DELAY_ms(100);
+if(PORTBbits.RB1 == 0)
+{
+ui8SetMode = 1;
+}
+
+}
+
+if(ui8SetMode!= 0)
+{
+if(PORTBbits.RB1 == 0)
+{
+DELAY_ms(100);
+if(PORTBbits.RB1 == 0)
+{
+ui8SetMode++;
+if(ui8SetMode > 8)
+{
+ui8SetMode = 0;
+}
+}
+
+}
+if(PORTBbits.RB0 == 0)
+{
+DELAY_ms(100);
+if(PORTBbits.RB0 == 0)
+{
+ui8SetValue = 1;
+}
+}
+
 RTC_GetDateTime(&rtc);
-ucSec = rtc.sec;
-ucMin = rtc.min;
-ucHours = rtc.hour;
-ucDate = rtc.date;
-ucMonth = rtc.month;
-ucYear = rtc.year;
+ucSec = ui8Hex2DECDisplay(rtc.sec);
+ucMin = ui8Hex2DECDisplay(rtc.min);
+ucHours = ui8Hex2DECDisplay(rtc.hour);
+ucDate = ui8Hex2DECDisplay(rtc.date);
+ucMonth = ui8Hex2DECDisplay(rtc.month);
+ucYear = ui8Hex2DECDisplay(rtc.year);
 
 
+switch(ui8SetMode)
+{
+case 1:
+{
+if(ui8SetValue == 1)
+{
+ui8SetValue = 0;
+ucSec++;
+if(ucSec >= 60)
+{
+ucSec = 0;
+}
+}
+
+vDisplay(1,2,3,4);
+
+break;
+}
+case 2:
+{
+if(ui8SetValue == 1)
+{
+ui8SetValue = 0;
+ucMin++;
+if(ucMin >=60)
+{
+ucMin = 0;
+}
+}
+break;
+}
+case 3:
+{
+if(ui8SetValue == 1)
+{
+ui8SetValue = 0;
+ucHours++;
+if(ucHours >=13)
+{
+ucHours = 0;
+}
+}
+break;
+}
+case 4:
+{
+if(ui8SetValue == 1)
+{
+ui8SetValue = 0;
+ucDate++;
+if(ucDate >=31)
+{
+ucDate = 0;
+}
+}
+break;
+}
+case 5:
+{
+if(ui8SetValue == 1)
+{
+ui8SetValue = 0;
+ucMonth++;
+if(ucMonth >=13)
+{
+ucMonth = 0;
+}
+}
+break;
+}
+case 6:
+{
+if(ui8SetValue == 1)
+{
+ui8SetValue = 0;
+ucYear++;
+if(ucYear >= 2099)
+{
+ucYear = 0;
+}
+}
+break;
+}
+case 7:
+{
+
+}
+case 8:
+{
+
+rtc.sec = ui8Dec2HexDisplay(ucSec);
+rtc.min = ui8Dec2HexDisplay(ucMin);
+rtc.hour = ui8Dec2HexDisplay(ucHours);
+rtc.date = ui8Dec2HexDisplay(ucDate);
+rtc.month = ui8Dec2HexDisplay(ucMonth);
+rtc.year = ui8Dec2HexDisplay(ucYear);
 
 
-PORTD = ucBCD_ARR[ucSec&0x0F];
-PORTB |= 0x3C;
-PORTB &= 0xDF;
-DELAY_ms(5);
+RTC_SetDateTime(&rtc);
+break;
+}
+default:
+{
+break;
+}
+}
 
-PORTD = ucBCD_ARR[(ucSec&0xF0) >> 4];
-PORTB |= 0x3C;
-PORTB &= 0xEF;
-DELAY_ms(5);
+}
+else
+{
 
-PORTD = ucBCD_ARR[ucMin&0x0F];
-PORTB |= 0x3C;
-PORTB &= 0xF7;
-DELAY_ms(5);
-
-PORTD = ucBCD_ARR[(ucMin&0xF0) >> 4];
-PORTB |= 0x3C;
-PORTB &= 0xFB;
-DELAY_ms(5);
+vDisplay(5,6,7,8);
+}
 }
 
 return (0);

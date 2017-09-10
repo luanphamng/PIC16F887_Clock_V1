@@ -73,8 +73,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S138 . sec min hour weekDay date month year ]
 "82
 [v _RTC_Init `(v ~T0 @X0 0 ef ]
-"83
-[v _RTC_SetDateTime `(v ~T0 @X0 0 ef1`*S138 ]
 "232 /usr/microchip/xc8/v1.43/include/pic16f887.h
 [s S8 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S8 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
@@ -83,12 +81,18 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S7 . . ]
 "243
 [v _PORTBbits `VS7 ~T0 @X0 0 e@6 ]
-"84 rtc.h
-[v _RTC_GetDateTime `(v ~T0 @X0 0 ef1`*S138 ]
-"350 /usr/microchip/xc8/v1.43/include/pic16f887.h
-[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
 "68 delay.h
 [v _DELAY_ms `(v ~T0 @X0 0 ef1`ui ]
+"84 rtc.h
+[v _RTC_GetDateTime `(v ~T0 @X0 0 ef1`*S138 ]
+"49 display.h
+[v _ui8Hex2DECDisplay `(uc ~T0 @X0 0 ef1`uc ]
+"50
+[v _vDisplay `(v ~T0 @X0 0 ef4`uc`uc`uc`uc ]
+"48
+[v _ui8Dec2HexDisplay `(uc ~T0 @X0 0 ef1`uc ]
+"83 rtc.h
+[v _RTC_SetDateTime `(v ~T0 @X0 0 ef1`*S138 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -1629,7 +1633,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;delay.h: 67: void DELAY_us(uint16_t us_count);
 [; ;delay.h: 68: void DELAY_ms(uint16_t ms_count);
 [; ;delay.h: 69: void DELAY_sec(uint16_t var_delaySecCount_u16);
-"38 IC74hc595.h
+"71 userdefine.h
 [v _ucBCD_ARR `uc ~T0 @X0 -> 10 `i e ]
 [i _ucBCD_ARR
 :U ..
@@ -1645,321 +1649,648 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> -> 246 `i `uc
 ..
 ]
-[; ;IC74hc595.h: 38: unsigned char ucBCD_ARR[10]= {0xFC,0x60,0xDA,0xF2,0x66,0xB6,0xBE,0xE0,0xFE,0xF6};
-[; ;IC74hc595.h: 40: void vSendData595(unsigned char x);
-[; ;IC74hc595.h: 41: unsigned char Binary2BCD(unsigned char a);
-"33 main.c
-[v _ReverserByte `(uc ~T0 @X0 1 ef1`uc ]
-"34
-{
-[; ;main.c: 33: uint8_t ReverserByte(uint8_t ui8Input)
-[; ;main.c: 34: {
-[e :U _ReverserByte ]
-"33
-[v _ui8Input `uc ~T0 @X0 1 r1 ]
-"34
-[f ]
-"35
-[v _ui8Tmp `uc ~T0 @X0 1 a ]
-"36
-[v _ui8Tmp2 `uc ~T0 @X0 1 a ]
-[; ;main.c: 35: uint8_t ui8Tmp;
-[; ;main.c: 36: uint8_t ui8Tmp2;
-[; ;main.c: 37: for(ui8Tmp2 = 0; ui8Tmp2 <= 8; ui8Tmp2++)
-"37
-{
-[e = _ui8Tmp2 -> -> 0 `i `uc ]
-[e $ <= -> _ui8Tmp2 `i -> 8 `i 140  ]
-[e $U 141  ]
-"38
-[e :U 140 ]
-[; ;main.c: 38: {
-{
-[; ;main.c: 39: if((ui8Input && 0b00000001) == 1)
-"39
-[e $ ! == -> && != -> _ui8Input `i -> -> -> 0 `i `uc `i != -> 1 `i -> 0 `i `i -> 1 `i 143  ]
-[; ;main.c: 40: ui8Tmp |= 0x01;
-"40
-[e =| _ui8Tmp -> -> 1 `i `uc ]
-[e :U 143 ]
-[; ;main.c: 42: ui8Input >>= 1;
-"42
-[e =>> _ui8Input -> 1 `i ]
-[; ;main.c: 43: ui8Tmp <<= 1;
-"43
-[e =<< _ui8Tmp -> 1 `i ]
-"44
-}
-"37
-[e ++ _ui8Tmp2 -> -> 1 `i `uc ]
-[e $ <= -> _ui8Tmp2 `i -> 8 `i 140  ]
-[e :U 141 ]
-"44
-}
-[; ;main.c: 44: }
-[; ;main.c: 46: return ui8Tmp;
-"46
-[e ) _ui8Tmp ]
-[e $UE 139  ]
-[; ;main.c: 47: }
-"47
-[e :UE 139 ]
-}
+[; ;userdefine.h: 71: unsigned char ucBCD_ARR[10]= {0xFC,0x60,0xDA,0xF2,0x66,0xB6,0xBE,0xE0,0xFE,0xF6};
+[; ;display.h: 48: uint8_t ui8Dec2HexDisplay(uint8_t ui8Input);
+[; ;display.h: 49: uint8_t ui8Hex2DECDisplay(uint8_t ui8Input);
+[; ;display.h: 50: void vDisplay(uint8_t ui8First, uint8_t ui8Second, uint8_t ui8Thrd, uint8_t ui8Fourth);
 [v $root$_main `(v ~T0 @X0 0 e ]
-"50
+"23 main.c
 [v _main `(i ~T0 @X0 1 ef ]
-"51
+"24
 {
-[; ;main.c: 50: int main()
-[; ;main.c: 51: {
+[; ;main.c: 23: int main()
+[; ;main.c: 24: {
 [e :U _main ]
 [f ]
-[; ;main.c: 54: TRISCbits.TRISC5 = 0;
-"54
+[; ;main.c: 27: TRISCbits.TRISC5 = 0;
+"27
 [e = . . _TRISCbits 0 5 -> -> 0 `i `uc ]
-[; ;main.c: 55: TRISCbits.TRISC6 = 0;
-"55
+[; ;main.c: 28: TRISCbits.TRISC6 = 0;
+"28
 [e = . . _TRISCbits 0 6 -> -> 0 `i `uc ]
-[; ;main.c: 56: TRISCbits.TRISC7 = 0;
-"56
+[; ;main.c: 29: TRISCbits.TRISC7 = 0;
+"29
 [e = . . _TRISCbits 0 7 -> -> 0 `i `uc ]
-[; ;main.c: 58: TRISD = 0x00;
-"58
+[; ;main.c: 31: TRISD = 0x00;
+"31
 [e = _TRISD -> -> 0 `i `uc ]
-[; ;main.c: 60: TRISBbits.TRISB0 = 1;
-"60
+[; ;main.c: 33: TRISBbits.TRISB0 = 1;
+"33
 [e = . . _TRISBbits 0 0 -> -> 1 `i `uc ]
-[; ;main.c: 61: TRISBbits.TRISB1 = 1;
-"61
+[; ;main.c: 34: TRISBbits.TRISB1 = 1;
+"34
 [e = . . _TRISBbits 0 1 -> -> 1 `i `uc ]
-[; ;main.c: 62: TRISBbits.TRISB2 = 0;
-"62
+[; ;main.c: 35: TRISBbits.TRISB2 = 0;
+"35
 [e = . . _TRISBbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 63: TRISBbits.TRISB3 = 0;
-"63
+[; ;main.c: 36: TRISBbits.TRISB3 = 0;
+"36
 [e = . . _TRISBbits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 64: TRISBbits.TRISB4 = 0;
-"64
+[; ;main.c: 37: TRISBbits.TRISB4 = 0;
+"37
 [e = . . _TRISBbits 0 4 -> -> 0 `i `uc ]
-[; ;main.c: 65: TRISBbits.TRISB5 = 0;
-"65
+[; ;main.c: 38: TRISBbits.TRISB5 = 0;
+"38
 [e = . . _TRISBbits 0 5 -> -> 0 `i `uc ]
-[; ;main.c: 67: TRISBbits.TRISB7 = 0;
-"67
+[; ;main.c: 40: TRISBbits.TRISB7 = 0;
+"40
 [e = . . _TRISBbits 0 7 -> -> 0 `i `uc ]
-[; ;main.c: 69: TRISEbits.TRISE0 = 0;
-"69
+[; ;main.c: 42: TRISEbits.TRISE0 = 0;
+"42
 [e = . . _TRISEbits 0 0 -> -> 0 `i `uc ]
-[; ;main.c: 71: WPUBbits.WPUB0 = 1;
-"71
+[; ;main.c: 44: WPUBbits.WPUB0 = 1;
+"44
 [e = . . _WPUBbits 1 0 -> -> 1 `i `uc ]
-[; ;main.c: 72: WPUBbits.WPUB1 = 1;
-"72
+[; ;main.c: 45: WPUBbits.WPUB1 = 1;
+"45
 [e = . . _WPUBbits 1 1 -> -> 1 `i `uc ]
-[; ;main.c: 73: WPUBbits.WPUB2 = 1;
-"73
+[; ;main.c: 46: WPUBbits.WPUB2 = 1;
+"46
 [e = . . _WPUBbits 1 2 -> -> 1 `i `uc ]
-[; ;main.c: 74: OPTION_REGbits.nRBPU = 0;
-"74
+[; ;main.c: 47: OPTION_REGbits.nRBPU = 0;
+"47
 [e = . . _OPTION_REGbits 0 5 -> -> 0 `i `uc ]
-[; ;main.c: 76: ANSELHbits.ANS12 = 0;
-"76
+[; ;main.c: 49: ANSELHbits.ANS12 = 0;
+"49
 [e = . . _ANSELHbits 0 4 -> -> 0 `i `uc ]
-[; ;main.c: 77: ANSELHbits.ANS10 = 0;
-"77
+[; ;main.c: 50: ANSELHbits.ANS10 = 0;
+"50
 [e = . . _ANSELHbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 78: ANSELHbits.ANS13 = 0;
-"78
+[; ;main.c: 51: ANSELHbits.ANS13 = 0;
+"51
 [e = . . _ANSELHbits 0 5 -> -> 0 `i `uc ]
-[; ;main.c: 79: ANSELHbits.ANS11 = 0;
-"79
+[; ;main.c: 52: ANSELHbits.ANS11 = 0;
+"52
 [e = . . _ANSELHbits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 80: ANSELHbits.ANS9 = 0;
-"80
+[; ;main.c: 53: ANSELHbits.ANS9 = 0;
+"53
 [e = . . _ANSELHbits 0 1 -> -> 0 `i `uc ]
-[; ;main.c: 81: ANSELHbits.ANS8 = 0;
-"81
+[; ;main.c: 54: ANSELHbits.ANS8 = 0;
+"54
 [e = . . _ANSELHbits 0 0 -> -> 0 `i `uc ]
-[; ;main.c: 82: ANSELbits.ANS5 = 0;
-"82
+[; ;main.c: 55: ANSELbits.ANS5 = 0;
+"55
 [e = . . _ANSELbits 0 5 -> -> 0 `i `uc ]
-[; ;main.c: 84: IOCB = 0x00;
-"84
+[; ;main.c: 57: IOCB = 0x00;
+"57
 [e = _IOCB -> -> 0 `i `uc ]
-[; ;main.c: 86: PORTB = 0xFF;
-"86
+[; ;main.c: 59: PORTB = 0xFF;
+"59
 [e = _PORTB -> -> 255 `i `uc ]
-"89
+"62
 [v _ucSec `uc ~T0 @X0 1 a ]
-"90
+"63
 [v _ucMin `uc ~T0 @X0 1 a ]
-"91
+"64
 [v _ucHours `uc ~T0 @X0 1 a ]
-"92
+"65
 [v _ucDate `uc ~T0 @X0 1 a ]
-"93
+"66
 [v _ucMonth `uc ~T0 @X0 1 a ]
-"94
+"67
 [v _ucYear `uc ~T0 @X0 1 a ]
-"96
-[v _ucSetData `uc ~T0 @X0 1 a ]
-"97
-[v _ucSetCnt `uc ~T0 @X0 1 a ]
-"102
+"69
+[v _ui8SetMode `uc ~T0 @X0 1 a ]
+"70
+[v _ui8SetValue `uc ~T0 @X0 1 a ]
+"72
 [v _rtc `S138 ~T0 @X0 1 a ]
-[; ;main.c: 89: uint8_t ucSec;
-[; ;main.c: 90: uint8_t ucMin;
-[; ;main.c: 91: uint8_t ucHours;
-[; ;main.c: 92: uint8_t ucDate;
-[; ;main.c: 93: uint8_t ucMonth;
-[; ;main.c: 94: uint8_t ucYear;
-[; ;main.c: 96: uint8_t ucSetData;
-[; ;main.c: 97: uint8_t ucSetCnt;
-[; ;main.c: 102: rtc_t rtc;
-[; ;main.c: 106: ucSec = 0;
-"106
+[; ;main.c: 62: uint8_t ucSec;
+[; ;main.c: 63: uint8_t ucMin;
+[; ;main.c: 64: uint8_t ucHours;
+[; ;main.c: 65: uint8_t ucDate;
+[; ;main.c: 66: uint8_t ucMonth;
+[; ;main.c: 67: uint8_t ucYear;
+[; ;main.c: 69: uint8_t ui8SetMode;
+[; ;main.c: 70: uint8_t ui8SetValue;
+[; ;main.c: 72: rtc_t rtc;
+[; ;main.c: 76: ucSec = 0;
+"76
 [e = _ucSec -> -> 0 `i `uc ]
-[; ;main.c: 107: ucMin = 0;
-"107
+[; ;main.c: 77: ucMin = 0;
+"77
 [e = _ucMin -> -> 0 `i `uc ]
-[; ;main.c: 108: ucHours = 0;
-"108
+[; ;main.c: 78: ucHours = 0;
+"78
 [e = _ucHours -> -> 0 `i `uc ]
-[; ;main.c: 109: ucDate = 0;
-"109
+[; ;main.c: 79: ucDate = 0;
+"79
 [e = _ucDate -> -> 0 `i `uc ]
-[; ;main.c: 110: ucMonth = 0;
-"110
+[; ;main.c: 80: ucMonth = 0;
+"80
 [e = _ucMonth -> -> 0 `i `uc ]
-[; ;main.c: 111: ucYear = 0;
-"111
+[; ;main.c: 81: ucYear = 0;
+"81
 [e = _ucYear -> -> 0 `i `uc ]
-[; ;main.c: 113: ucSetData = 0;
-"113
-[e = _ucSetData -> -> 0 `i `uc ]
-[; ;main.c: 114: ucSetCnt = 0;
-"114
-[e = _ucSetCnt -> -> 0 `i `uc ]
-[; ;main.c: 118: RTC_Init();
-"118
+[; ;main.c: 83: ui8SetMode = 0;
+"83
+[e = _ui8SetMode -> -> 0 `i `uc ]
+[; ;main.c: 84: ui8SetValue = 0;
+"84
+[e = _ui8SetValue -> -> 0 `i `uc ]
+[; ;main.c: 87: RTC_Init();
+"87
 [e ( _RTC_Init ..  ]
-[; ;main.c: 122: rtc.hour = 0x00;
-"122
+[; ;main.c: 91: rtc.hour = 0x00;
+"91
 [e = . _rtc 2 -> -> 0 `i `uc ]
-[; ;main.c: 123: rtc.min = 0x08;
-"123
+[; ;main.c: 92: rtc.min = 0x08;
+"92
 [e = . _rtc 1 -> -> 8 `i `uc ]
-[; ;main.c: 124: rtc.sec = 0x30;
-"124
+[; ;main.c: 93: rtc.sec = 0x30;
+"93
 [e = . _rtc 0 -> -> 48 `i `uc ]
-[; ;main.c: 126: rtc.date = 0x31;
-"126
+[; ;main.c: 95: rtc.date = 0x31;
+"95
 [e = . _rtc 4 -> -> 49 `i `uc ]
-[; ;main.c: 127: rtc.month = 0x12;
-"127
+[; ;main.c: 96: rtc.month = 0x12;
+"96
 [e = . _rtc 5 -> -> 18 `i `uc ]
-[; ;main.c: 128: rtc.year = 0x16;
-"128
+[; ;main.c: 97: rtc.year = 0x16;
+"97
 [e = . _rtc 6 -> -> 22 `i `uc ]
-[; ;main.c: 129: rtc.weekDay = 5;
-"129
+[; ;main.c: 98: rtc.weekDay = 5;
+"98
 [e = . _rtc 3 -> -> 5 `i `uc ]
-[; ;main.c: 134: RTC_SetDateTime(&rtc);
-"134
-[e ( _RTC_SetDateTime (1 &U _rtc ]
-[; ;main.c: 137: PORTBbits.RB5 = 1;
-"137
-[e = . . _PORTBbits 0 5 -> -> 1 `i `uc ]
-[; ;main.c: 138: PORTBbits.RB4 = 1;
-"138
-[e = . . _PORTBbits 0 4 -> -> 1 `i `uc ]
-[; ;main.c: 139: while(1)
-"139
-[e :U 146 ]
-[; ;main.c: 140: {
-"140
+[; ;main.c: 106: while(1)
+"106
+[e :U 141 ]
+[; ;main.c: 107: {
+"107
 {
-[; ;main.c: 142: RTC_GetDateTime(&rtc);
-"142
-[e ( _RTC_GetDateTime (1 &U _rtc ]
-[; ;main.c: 143: ucSec = rtc.sec;
-"143
-[e = _ucSec . _rtc 0 ]
-[; ;main.c: 144: ucMin = rtc.min;
-"144
-[e = _ucMin . _rtc 1 ]
-[; ;main.c: 145: ucHours = rtc.hour;
-"145
-[e = _ucHours . _rtc 2 ]
-[; ;main.c: 146: ucDate = rtc.date;
-"146
-[e = _ucDate . _rtc 4 ]
-[; ;main.c: 147: ucMonth = rtc.month;
-"147
-[e = _ucMonth . _rtc 5 ]
-[; ;main.c: 148: ucYear = rtc.year;
-"148
-[e = _ucYear . _rtc 6 ]
-[; ;main.c: 153: PORTD = ucBCD_ARR[ucSec&0x0F];
-"153
-[e = _PORTD *U + &U _ucBCD_ARR * -> -> & -> _ucSec `i -> 15 `i `ui `ux -> -> # *U &U _ucBCD_ARR `ui `ux ]
-[; ;main.c: 154: PORTB |= 0x3C;
-"154
-[e =| _PORTB -> -> 60 `i `uc ]
-[; ;main.c: 155: PORTB &= 0xDF;
-"155
-[e =& _PORTB -> -> 223 `i `uc ]
-[; ;main.c: 156: DELAY_ms(5);
-"156
-[e ( _DELAY_ms (1 -> -> 5 `i `ui ]
-[; ;main.c: 158: PORTD = ucBCD_ARR[(ucSec&0xF0) >> 4];
-"158
-[e = _PORTD *U + &U _ucBCD_ARR * -> -> >> & -> _ucSec `i -> 240 `i -> 4 `i `ui `ux -> -> # *U &U _ucBCD_ARR `ui `ux ]
-[; ;main.c: 159: PORTB |= 0x3C;
-"159
-[e =| _PORTB -> -> 60 `i `uc ]
-[; ;main.c: 160: PORTB &= 0xEF;
-"160
-[e =& _PORTB -> -> 239 `i `uc ]
-[; ;main.c: 161: DELAY_ms(5);
-"161
-[e ( _DELAY_ms (1 -> -> 5 `i `ui ]
-[; ;main.c: 163: PORTD = ucBCD_ARR[ucMin&0x0F];
-"163
-[e = _PORTD *U + &U _ucBCD_ARR * -> -> & -> _ucMin `i -> 15 `i `ui `ux -> -> # *U &U _ucBCD_ARR `ui `ux ]
-[; ;main.c: 164: PORTB |= 0x3C;
-"164
-[e =| _PORTB -> -> 60 `i `uc ]
-[; ;main.c: 165: PORTB &= 0xF7;
-"165
-[e =& _PORTB -> -> 247 `i `uc ]
-[; ;main.c: 166: DELAY_ms(5);
-"166
-[e ( _DELAY_ms (1 -> -> 5 `i `ui ]
-[; ;main.c: 168: PORTD = ucBCD_ARR[(ucMin&0xF0) >> 4];
-"168
-[e = _PORTD *U + &U _ucBCD_ARR * -> -> >> & -> _ucMin `i -> 240 `i -> 4 `i `ui `ux -> -> # *U &U _ucBCD_ARR `ui `ux ]
-[; ;main.c: 169: PORTB |= 0x3C;
-"169
-[e =| _PORTB -> -> 60 `i `uc ]
-[; ;main.c: 170: PORTB &= 0xFB;
-"170
-[e =& _PORTB -> -> 251 `i `uc ]
-[; ;main.c: 171: DELAY_ms(5);
-"171
-[e ( _DELAY_ms (1 -> -> 5 `i `ui ]
-"172
+[; ;main.c: 110: if(PORTBbits.RB1 == 0)
+"110
+[e $ ! == -> . . _PORTBbits 0 1 `i -> 0 `i 143  ]
+[; ;main.c: 111: {
+"111
+{
+[; ;main.c: 112: DELAY_ms(100);
+"112
+[e ( _DELAY_ms (1 -> -> 100 `i `ui ]
+[; ;main.c: 113: if(PORTBbits.RB1 == 0)
+"113
+[e $ ! == -> . . _PORTBbits 0 1 `i -> 0 `i 144  ]
+[; ;main.c: 114: {
+"114
+{
+[; ;main.c: 115: ui8SetMode = 1;
+"115
+[e = _ui8SetMode -> -> 1 `i `uc ]
+"116
 }
-[e :U 145 ]
-"139
-[e $U 146  ]
+[e :U 144 ]
+"118
+}
+[e :U 143 ]
+[; ;main.c: 116: }
+[; ;main.c: 118: }
+[; ;main.c: 120: if(ui8SetMode!= 0)
+"120
+[e $ ! != -> _ui8SetMode `i -> 0 `i 145  ]
+[; ;main.c: 121: {
+"121
+{
+[; ;main.c: 122: if(PORTBbits.RB1 == 0)
+"122
+[e $ ! == -> . . _PORTBbits 0 1 `i -> 0 `i 146  ]
+[; ;main.c: 123: {
+"123
+{
+[; ;main.c: 124: DELAY_ms(100);
+"124
+[e ( _DELAY_ms (1 -> -> 100 `i `ui ]
+[; ;main.c: 125: if(PORTBbits.RB1 == 0)
+"125
+[e $ ! == -> . . _PORTBbits 0 1 `i -> 0 `i 147  ]
+[; ;main.c: 126: {
+"126
+{
+[; ;main.c: 127: ui8SetMode++;
+"127
+[e ++ _ui8SetMode -> -> 1 `i `uc ]
+[; ;main.c: 128: if(ui8SetMode > 8)
+"128
+[e $ ! > -> _ui8SetMode `i -> 8 `i 148  ]
+[; ;main.c: 129: {
+"129
+{
+[; ;main.c: 130: ui8SetMode = 0;
+"130
+[e = _ui8SetMode -> -> 0 `i `uc ]
+"131
+}
+[e :U 148 ]
+"132
+}
 [e :U 147 ]
-[; ;main.c: 172: }
-[; ;main.c: 174: return (0);
+"134
+}
+[e :U 146 ]
+[; ;main.c: 131: }
+[; ;main.c: 132: }
+[; ;main.c: 134: }
+[; ;main.c: 135: if(PORTBbits.RB0 == 0)
+"135
+[e $ ! == -> . . _PORTBbits 0 0 `i -> 0 `i 149  ]
+[; ;main.c: 136: {
+"136
+{
+[; ;main.c: 137: DELAY_ms(100);
+"137
+[e ( _DELAY_ms (1 -> -> 100 `i `ui ]
+[; ;main.c: 138: if(PORTBbits.RB0 == 0)
+"138
+[e $ ! == -> . . _PORTBbits 0 0 `i -> 0 `i 150  ]
+[; ;main.c: 139: {
+"139
+{
+[; ;main.c: 140: ui8SetValue = 1;
+"140
+[e = _ui8SetValue -> -> 1 `i `uc ]
+"141
+}
+[e :U 150 ]
+"142
+}
+[e :U 149 ]
+[; ;main.c: 141: }
+[; ;main.c: 142: }
+[; ;main.c: 144: RTC_GetDateTime(&rtc);
+"144
+[e ( _RTC_GetDateTime (1 &U _rtc ]
+[; ;main.c: 145: ucSec = ui8Hex2DECDisplay(rtc.sec);
+"145
+[e = _ucSec ( _ui8Hex2DECDisplay (1 . _rtc 0 ]
+[; ;main.c: 146: ucMin = ui8Hex2DECDisplay(rtc.min);
+"146
+[e = _ucMin ( _ui8Hex2DECDisplay (1 . _rtc 1 ]
+[; ;main.c: 147: ucHours = ui8Hex2DECDisplay(rtc.hour);
+"147
+[e = _ucHours ( _ui8Hex2DECDisplay (1 . _rtc 2 ]
+[; ;main.c: 148: ucDate = ui8Hex2DECDisplay(rtc.date);
+"148
+[e = _ucDate ( _ui8Hex2DECDisplay (1 . _rtc 4 ]
+[; ;main.c: 149: ucMonth = ui8Hex2DECDisplay(rtc.month);
+"149
+[e = _ucMonth ( _ui8Hex2DECDisplay (1 . _rtc 5 ]
+[; ;main.c: 150: ucYear = ui8Hex2DECDisplay(rtc.year);
+"150
+[e = _ucYear ( _ui8Hex2DECDisplay (1 . _rtc 6 ]
+[; ;main.c: 153: switch(ui8SetMode)
+"153
+[e $U 152  ]
+[; ;main.c: 154: {
+"154
+{
+[; ;main.c: 155: case 1:
+"155
+[e :U 153 ]
+[; ;main.c: 156: {
+"156
+{
+[; ;main.c: 157: if(ui8SetValue == 1)
+"157
+[e $ ! == -> _ui8SetValue `i -> 1 `i 154  ]
+[; ;main.c: 158: {
+"158
+{
+[; ;main.c: 159: ui8SetValue = 0;
+"159
+[e = _ui8SetValue -> -> 0 `i `uc ]
+[; ;main.c: 160: ucSec++;
+"160
+[e ++ _ucSec -> -> 1 `i `uc ]
+[; ;main.c: 161: if(ucSec >= 60)
+"161
+[e $ ! >= -> _ucSec `i -> 60 `i 155  ]
+[; ;main.c: 162: {
+"162
+{
+[; ;main.c: 163: ucSec = 0;
+"163
+[e = _ucSec -> -> 0 `i `uc ]
+"164
+}
+[e :U 155 ]
+"165
+}
+[e :U 154 ]
+[; ;main.c: 164: }
+[; ;main.c: 165: }
+[; ;main.c: 167: vDisplay(1,2,3,4);
+"167
+[e ( _vDisplay (4 , , , -> -> 1 `i `uc -> -> 2 `i `uc -> -> 3 `i `uc -> -> 4 `i `uc ]
+[; ;main.c: 169: break;
+"169
+[e $U 151  ]
+"170
+}
+[; ;main.c: 170: }
+[; ;main.c: 171: case 2:
+"171
+[e :U 156 ]
+[; ;main.c: 172: {
+"172
+{
+[; ;main.c: 173: if(ui8SetValue == 1)
+"173
+[e $ ! == -> _ui8SetValue `i -> 1 `i 157  ]
+[; ;main.c: 174: {
 "174
-[e ) -> 0 `i ]
-[e $UE 144  ]
-[; ;main.c: 175: }
+{
+[; ;main.c: 175: ui8SetValue = 0;
 "175
-[e :UE 144 ]
+[e = _ui8SetValue -> -> 0 `i `uc ]
+[; ;main.c: 176: ucMin++;
+"176
+[e ++ _ucMin -> -> 1 `i `uc ]
+[; ;main.c: 177: if(ucMin >=60)
+"177
+[e $ ! >= -> _ucMin `i -> 60 `i 158  ]
+[; ;main.c: 178: {
+"178
+{
+[; ;main.c: 179: ucMin = 0;
+"179
+[e = _ucMin -> -> 0 `i `uc ]
+"180
+}
+[e :U 158 ]
+"181
+}
+[e :U 157 ]
+[; ;main.c: 180: }
+[; ;main.c: 181: }
+[; ;main.c: 182: break;
+"182
+[e $U 151  ]
+"183
+}
+[; ;main.c: 183: }
+[; ;main.c: 184: case 3:
+"184
+[e :U 159 ]
+[; ;main.c: 185: {
+"185
+{
+[; ;main.c: 186: if(ui8SetValue == 1)
+"186
+[e $ ! == -> _ui8SetValue `i -> 1 `i 160  ]
+[; ;main.c: 187: {
+"187
+{
+[; ;main.c: 188: ui8SetValue = 0;
+"188
+[e = _ui8SetValue -> -> 0 `i `uc ]
+[; ;main.c: 189: ucHours++;
+"189
+[e ++ _ucHours -> -> 1 `i `uc ]
+[; ;main.c: 190: if(ucHours >=13)
+"190
+[e $ ! >= -> _ucHours `i -> 13 `i 161  ]
+[; ;main.c: 191: {
+"191
+{
+[; ;main.c: 192: ucHours = 0;
+"192
+[e = _ucHours -> -> 0 `i `uc ]
+"193
+}
+[e :U 161 ]
+"194
+}
+[e :U 160 ]
+[; ;main.c: 193: }
+[; ;main.c: 194: }
+[; ;main.c: 195: break;
+"195
+[e $U 151  ]
+"196
+}
+[; ;main.c: 196: }
+[; ;main.c: 197: case 4:
+"197
+[e :U 162 ]
+[; ;main.c: 198: {
+"198
+{
+[; ;main.c: 199: if(ui8SetValue == 1)
+"199
+[e $ ! == -> _ui8SetValue `i -> 1 `i 163  ]
+[; ;main.c: 200: {
+"200
+{
+[; ;main.c: 201: ui8SetValue = 0;
+"201
+[e = _ui8SetValue -> -> 0 `i `uc ]
+[; ;main.c: 202: ucDate++;
+"202
+[e ++ _ucDate -> -> 1 `i `uc ]
+[; ;main.c: 203: if(ucDate >=31)
+"203
+[e $ ! >= -> _ucDate `i -> 31 `i 164  ]
+[; ;main.c: 204: {
+"204
+{
+[; ;main.c: 205: ucDate = 0;
+"205
+[e = _ucDate -> -> 0 `i `uc ]
+"206
+}
+[e :U 164 ]
+"207
+}
+[e :U 163 ]
+[; ;main.c: 206: }
+[; ;main.c: 207: }
+[; ;main.c: 208: break;
+"208
+[e $U 151  ]
+"209
+}
+[; ;main.c: 209: }
+[; ;main.c: 210: case 5:
+"210
+[e :U 165 ]
+[; ;main.c: 211: {
+"211
+{
+[; ;main.c: 212: if(ui8SetValue == 1)
+"212
+[e $ ! == -> _ui8SetValue `i -> 1 `i 166  ]
+[; ;main.c: 213: {
+"213
+{
+[; ;main.c: 214: ui8SetValue = 0;
+"214
+[e = _ui8SetValue -> -> 0 `i `uc ]
+[; ;main.c: 215: ucMonth++;
+"215
+[e ++ _ucMonth -> -> 1 `i `uc ]
+[; ;main.c: 216: if(ucMonth >=13)
+"216
+[e $ ! >= -> _ucMonth `i -> 13 `i 167  ]
+[; ;main.c: 217: {
+"217
+{
+[; ;main.c: 218: ucMonth = 0;
+"218
+[e = _ucMonth -> -> 0 `i `uc ]
+"219
+}
+[e :U 167 ]
+"220
+}
+[e :U 166 ]
+[; ;main.c: 219: }
+[; ;main.c: 220: }
+[; ;main.c: 221: break;
+"221
+[e $U 151  ]
+"222
+}
+[; ;main.c: 222: }
+[; ;main.c: 223: case 6:
+"223
+[e :U 168 ]
+[; ;main.c: 224: {
+"224
+{
+[; ;main.c: 225: if(ui8SetValue == 1)
+"225
+[e $ ! == -> _ui8SetValue `i -> 1 `i 169  ]
+[; ;main.c: 226: {
+"226
+{
+[; ;main.c: 227: ui8SetValue = 0;
+"227
+[e = _ui8SetValue -> -> 0 `i `uc ]
+[; ;main.c: 228: ucYear++;
+"228
+[e ++ _ucYear -> -> 1 `i `uc ]
+[; ;main.c: 229: if(ucYear >= 2099)
+"229
+[e $ ! >= -> _ucYear `i -> 2099 `i 170  ]
+[; ;main.c: 230: {
+"230
+{
+[; ;main.c: 231: ucYear = 0;
+"231
+[e = _ucYear -> -> 0 `i `uc ]
+"232
+}
+[e :U 170 ]
+"233
+}
+[e :U 169 ]
+[; ;main.c: 232: }
+[; ;main.c: 233: }
+[; ;main.c: 234: break;
+"234
+[e $U 151  ]
+"235
+}
+[; ;main.c: 235: }
+[; ;main.c: 236: case 7:
+"236
+[e :U 171 ]
+[; ;main.c: 237: {
+"237
+{
+"239
+}
+[; ;main.c: 239: }
+[; ;main.c: 240: case 8:
+"240
+[e :U 172 ]
+[; ;main.c: 241: {
+"241
+{
+[; ;main.c: 243: rtc.sec = ui8Dec2HexDisplay(ucSec);
+"243
+[e = . _rtc 0 ( _ui8Dec2HexDisplay (1 _ucSec ]
+[; ;main.c: 244: rtc.min = ui8Dec2HexDisplay(ucMin);
+"244
+[e = . _rtc 1 ( _ui8Dec2HexDisplay (1 _ucMin ]
+[; ;main.c: 245: rtc.hour = ui8Dec2HexDisplay(ucHours);
+"245
+[e = . _rtc 2 ( _ui8Dec2HexDisplay (1 _ucHours ]
+[; ;main.c: 246: rtc.date = ui8Dec2HexDisplay(ucDate);
+"246
+[e = . _rtc 4 ( _ui8Dec2HexDisplay (1 _ucDate ]
+[; ;main.c: 247: rtc.month = ui8Dec2HexDisplay(ucMonth);
+"247
+[e = . _rtc 5 ( _ui8Dec2HexDisplay (1 _ucMonth ]
+[; ;main.c: 248: rtc.year = ui8Dec2HexDisplay(ucYear);
+"248
+[e = . _rtc 6 ( _ui8Dec2HexDisplay (1 _ucYear ]
+[; ;main.c: 251: RTC_SetDateTime(&rtc);
+"251
+[e ( _RTC_SetDateTime (1 &U _rtc ]
+[; ;main.c: 252: break;
+"252
+[e $U 151  ]
+"253
+}
+[; ;main.c: 253: }
+[; ;main.c: 254: default:
+"254
+[e :U 173 ]
+[; ;main.c: 255: {
+"255
+{
+[; ;main.c: 256: break;
+"256
+[e $U 151  ]
+"257
+}
+"258
+}
+[; ;main.c: 257: }
+[; ;main.c: 258: }
+[e $U 151  ]
+"153
+[e :U 152 ]
+[e [\ _ui8SetMode , $ -> -> 1 `i `uc 153
+ , $ -> -> 2 `i `uc 156
+ , $ -> -> 3 `i `uc 159
+ , $ -> -> 4 `i `uc 162
+ , $ -> -> 5 `i `uc 165
+ , $ -> -> 6 `i `uc 168
+ , $ -> -> 7 `i `uc 171
+ , $ -> -> 8 `i `uc 172
+ 173 ]
+"258
+[e :U 151 ]
+"260
+}
+[; ;main.c: 260: }
+[e $U 174  ]
+"261
+[e :U 145 ]
+[; ;main.c: 261: else
+[; ;main.c: 262: {
+"262
+{
+[; ;main.c: 264: vDisplay(5,6,7,8);
+"264
+[e ( _vDisplay (4 , , , -> -> 5 `i `uc -> -> 6 `i `uc -> -> 7 `i `uc -> -> 8 `i `uc ]
+"265
+}
+[e :U 174 ]
+"266
+}
+[e :U 140 ]
+"106
+[e $U 141  ]
+[e :U 142 ]
+[; ;main.c: 265: }
+[; ;main.c: 266: }
+[; ;main.c: 268: return (0);
+"268
+[e ) -> 0 `i ]
+[e $UE 139  ]
+[; ;main.c: 269: }
+"269
+[e :UE 139 ]
 }

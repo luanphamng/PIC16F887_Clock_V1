@@ -1,14 +1,70 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"294 /usr/microchip/xc8/v1.43/include/pic16f887.h
-[s S10 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S10 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
-"293
-[u S9 `S10 1 ]
-[n S9 . . ]
+"68 i2c.h
+[v _I2C_Init `(v ~T0 @X0 0 ef ]
+"69
+[v _I2C_Start `(v ~T0 @X0 0 ef ]
+"71
+[v _I2C_Write `(v ~T0 @X0 0 ef1`uc ]
+"70
+[v _I2C_Stop `(v ~T0 @X0 0 ef ]
+"51 rtc.h
+[s S1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S1 . sec min hour weekDay date month year ]
+"72 i2c.h
+[v _I2C_Read `(uc ~T0 @X0 0 ef1`uc ]
+[; ;stdutils.h: 68: typedef signed char sint8_t;
+[; ;stdutils.h: 69: typedef unsigned char uint8_t;
+[; ;stdutils.h: 71: typedef signed int sint16_t;
+[; ;stdutils.h: 72: typedef unsigned int uint16_t;
+[; ;stdutils.h: 74: typedef signed long int sint32_t;
+[; ;stdutils.h: 75: typedef unsigned long int uint32_t;
+[; ;stdutils.h: 180: typedef enum
+[; ;stdutils.h: 181: {
+[; ;stdutils.h: 182: E_FALSE,
+[; ;stdutils.h: 183: E_TRUE
+[; ;stdutils.h: 184: }Boolean_et;
+[; ;stdutils.h: 187: typedef enum
+[; ;stdutils.h: 188: {
+[; ;stdutils.h: 189: E_FAILED,
+[; ;stdutils.h: 190: E_SUCCESS,
+[; ;stdutils.h: 191: E_BUSY,
+[; ;stdutils.h: 192: E_TIMEOUT
+[; ;stdutils.h: 193: }Status_et;
+[; ;stdutils.h: 196: typedef enum
+[; ;stdutils.h: 197: {
+[; ;stdutils.h: 198: E_BINARY=2,
+[; ;stdutils.h: 199: E_DECIMAL = 10,
+[; ;stdutils.h: 200: E_HEX = 16
+[; ;stdutils.h: 201: }NumericSystem_et;
+"302 stdutils.h
+[p x FOSC=HS ]
+"303
+[p x WDTE=OFF ]
+"304
+[p x PWRTE=OFF ]
 "305
-[v _PORTCbits `VS9 ~T0 @X0 0 e@7 ]
-"67 delay.h
-[v _DELAY_us `(v ~T0 @X0 0 ef1`ui ]
+[p x BOREN=OFF ]
+"306
+[p x LVP=OFF ]
+"307
+[p x CPD=OFF ]
+"308
+[p x WRT=OFF ]
+"309
+[p x CP=OFF ]
+[; ;rtc.h: 50: typedef struct
+[; ;rtc.h: 51: {
+[; ;rtc.h: 52: uint8_t sec;
+[; ;rtc.h: 53: uint8_t min;
+[; ;rtc.h: 54: uint8_t hour;
+[; ;rtc.h: 55: uint8_t weekDay;
+[; ;rtc.h: 56: uint8_t date;
+[; ;rtc.h: 57: uint8_t month;
+[; ;rtc.h: 58: uint8_t year;
+[; ;rtc.h: 59: }rtc_t;
+[; ;rtc.h: 82: void RTC_Init(void);
+[; ;rtc.h: 83: void RTC_SetDateTime(rtc_t *rtc);
+[; ;rtc.h: 84: void RTC_GetDateTime(rtc_t *rtc);
 [; ;pic16f887.h: 50: extern volatile unsigned char INDF @ 0x000;
 "52 /usr/microchip/xc8/v1.43/include/pic16f887.h
 [; ;pic16f887.h: 52: asm("INDF equ 00h");
@@ -1479,191 +1535,143 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic16f887.h: 4300: extern volatile __bit nTX8 @ (((unsigned) &TXSTA)*8) + 6;
 [; ;pic16f887.h: 4302: extern volatile __bit nW @ (((unsigned) &SSPSTAT)*8) + 2;
 [; ;pic16f887.h: 4304: extern volatile __bit nWRITE @ (((unsigned) &SSPSTAT)*8) + 2;
-[; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
-[; ;htc.h: 28: extern double __fpnormalize(double);
-[; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
-[; ;pic.h: 28: extern void __nop(void);
-[; ;pic.h: 77: extern unsigned int flash_read(unsigned short addr);
-[; ;eeprom_routines.h: 114: extern void eeprom_write(unsigned char addr, unsigned char value);
-[; ;eeprom_routines.h: 115: extern unsigned char eeprom_read(unsigned char addr);
-[; ;eeprom_routines.h: 116: extern void eecpymem(volatile unsigned char *to, __eeprom unsigned char *from, unsigned char size);
-[; ;eeprom_routines.h: 117: extern void memcpyee(__eeprom unsigned char *to, const unsigned char *from, unsigned char size);
-[; ;pic.h: 152: extern __nonreentrant void _delay(unsigned long);
-[; ;pic.h: 154: extern __nonreentrant void _delaywdt(unsigned long);
-[; ;pic.h: 192: extern unsigned char __resetbits;
-[; ;pic.h: 193: extern __bit __powerdown;
-[; ;pic.h: 194: extern __bit __timeout;
-[; ;IC74hc595.h: 39: void vSendData595(unsigned char x);
-[; ;IC74hc595.h: 40: unsigned char Binary2BCD(unsigned char a);
-[; ;stdutils.h: 68: typedef signed char sint8_t;
-[; ;stdutils.h: 69: typedef unsigned char uint8_t;
-[; ;stdutils.h: 71: typedef signed int sint16_t;
-[; ;stdutils.h: 72: typedef unsigned int uint16_t;
-[; ;stdutils.h: 74: typedef signed long int sint32_t;
-[; ;stdutils.h: 75: typedef unsigned long int uint32_t;
-[; ;stdutils.h: 180: typedef enum
-[; ;stdutils.h: 181: {
-[; ;stdutils.h: 182: E_FALSE,
-[; ;stdutils.h: 183: E_TRUE
-[; ;stdutils.h: 184: }Boolean_et;
-[; ;stdutils.h: 187: typedef enum
-[; ;stdutils.h: 188: {
-[; ;stdutils.h: 189: E_FAILED,
-[; ;stdutils.h: 190: E_SUCCESS,
-[; ;stdutils.h: 191: E_BUSY,
-[; ;stdutils.h: 192: E_TIMEOUT
-[; ;stdutils.h: 193: }Status_et;
-[; ;stdutils.h: 196: typedef enum
-[; ;stdutils.h: 197: {
-[; ;stdutils.h: 198: E_BINARY=2,
-[; ;stdutils.h: 199: E_DECIMAL = 10,
-[; ;stdutils.h: 200: E_HEX = 16
-[; ;stdutils.h: 201: }NumericSystem_et;
-"302 stdutils.h
-[p x FOSC=HS ]
-"303
-[p x WDTE=OFF ]
-"304
-[p x PWRTE=OFF ]
-"305
-[p x BOREN=OFF ]
-"306
-[p x LVP=OFF ]
-"307
-[p x CPD=OFF ]
-"308
-[p x WRT=OFF ]
-"309
-[p x CP=OFF ]
-[; ;delay.h: 67: void DELAY_us(uint16_t us_count);
-[; ;delay.h: 68: void DELAY_ms(uint16_t ms_count);
-[; ;delay.h: 69: void DELAY_sec(uint16_t var_delaySecCount_u16);
-"5 IC74hc595.c
-[v _vSendData595 `(v ~T0 @X0 1 ef1`uc ]
-"6
+[; ;i2c.h: 68: void I2C_Init();
+[; ;i2c.h: 69: void I2C_Start();
+[; ;i2c.h: 70: void I2C_Stop(void);
+[; ;i2c.h: 71: void I2C_Write(uint8_t );
+[; ;i2c.h: 72: uint8_t I2C_Read(uint8_t);
+"57 rtc.c
+[v _RTC_Init `(v ~T0 @X0 1 ef ]
+"58
 {
-[; ;IC74hc595.c: 5: void vSendData595(unsigned char x)
-[; ;IC74hc595.c: 6: {
-[e :U _vSendData595 ]
-"5
-[v _x `uc ~T0 @X0 1 r1 ]
-"6
+[; ;rtc.c: 57: void RTC_Init(void)
+[; ;rtc.c: 58: {
+[e :U _RTC_Init ]
 [f ]
-"9
-[v _i `uc ~T0 @X0 1 a ]
-[v _temp `uc ~T0 @X0 1 a ]
-[; ;IC74hc595.c: 9: unsigned char i, temp;
-[; ;IC74hc595.c: 11: for(i=0;i<8;i++)
-"11
-{
-[e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 8 `i 139  ]
-[e $U 140  ]
-"12
-[e :U 139 ]
-[; ;IC74hc595.c: 12: {
-{
-[; ;IC74hc595.c: 13: temp=x;
-"13
-[e = _temp _x ]
-[; ;IC74hc595.c: 14: temp=temp&0x80;
-"14
-[e = _temp -> & -> _temp `i -> 128 `i `uc ]
-[; ;IC74hc595.c: 15: if(temp==0x80)
-"15
-[e $ ! == -> _temp `i -> 128 `i 142  ]
-[; ;IC74hc595.c: 16: {
-"16
-{
-[; ;IC74hc595.c: 17: PORTCbits.RC5=1;
-"17
-[e = . . _PORTCbits 0 5 -> -> 1 `i `uc ]
-"18
+[; ;rtc.c: 59: I2C_Init();
+"59
+[e ( _I2C_Init ..  ]
+[; ;rtc.c: 60: I2C_Start();
+"60
+[e ( _I2C_Start ..  ]
+[; ;rtc.c: 62: I2C_Write(0xD0u);
+"62
+[e ( _I2C_Write (1 -> -> 208 `ui `uc ]
+[; ;rtc.c: 63: I2C_Write(0x07u);
+"63
+[e ( _I2C_Write (1 -> -> 7 `ui `uc ]
+[; ;rtc.c: 65: I2C_Write(0x00);
+"65
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+[; ;rtc.c: 67: I2C_Stop();
+"67
+[e ( _I2C_Stop ..  ]
+[; ;rtc.c: 68: }
+"68
+[e :UE 139 ]
 }
-[; ;IC74hc595.c: 18: }
-[e $U 143  ]
-"19
-[e :U 142 ]
-[; ;IC74hc595.c: 19: else
-[; ;IC74hc595.c: 20: {
-"20
+"95
+[v _RTC_SetDateTime `(v ~T0 @X0 1 ef1`*S1 ]
+"96
 {
-[; ;IC74hc595.c: 21: PORTCbits.RC5=0;
-"21
-[e = . . _PORTCbits 0 5 -> -> 0 `i `uc ]
-"22
-}
-[e :U 143 ]
-[; ;IC74hc595.c: 22: }
-[; ;IC74hc595.c: 23: x <<= 1;
-"23
-[e =<< _x -> 1 `i ]
-[; ;IC74hc595.c: 25: PORTCbits.RC6 = 0;
-"25
-[e = . . _PORTCbits 0 6 -> -> 0 `i `uc ]
-[; ;IC74hc595.c: 26: DELAY_us(10);
-"26
-[e ( _DELAY_us (1 -> -> 10 `i `ui ]
-[; ;IC74hc595.c: 27: PORTCbits.RC6 = 1;
-"27
-[e = . . _PORTCbits 0 6 -> -> 1 `i `uc ]
-"28
-}
-"11
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 8 `i 139  ]
-[e :U 140 ]
-"28
-}
-[; ;IC74hc595.c: 28: }
-[; ;IC74hc595.c: 32: }
-"32
-[e :UE 138 ]
-}
-"35
-[v _Binary2BCD `(uc ~T0 @X0 1 ef1`uc ]
-"36
-{
-[; ;IC74hc595.c: 35: unsigned char Binary2BCD(unsigned char a)
-[; ;IC74hc595.c: 36: {
-[e :U _Binary2BCD ]
-"35
-[v _a `uc ~T0 @X0 1 r1 ]
-"36
+[; ;rtc.c: 95: void RTC_SetDateTime(rtc_t *rtc)
+[; ;rtc.c: 96: {
+[e :U _RTC_SetDateTime ]
+"95
+[v _rtc `*S1 ~T0 @X0 1 r1 ]
+"96
 [f ]
-"37
-[v _t1 `uc ~T0 @X0 1 a ]
-[v _t2 `uc ~T0 @X0 1 a ]
-[; ;IC74hc595.c: 37: unsigned char t1, t2;
-[; ;IC74hc595.c: 38: t1 = a%10;
-"38
-[e = _t1 -> % -> _a `i -> 10 `i `uc ]
-[; ;IC74hc595.c: 39: t1 = t1 & 0x0F;
-"39
-[e = _t1 -> & -> _t1 `i -> 15 `i `uc ]
-[; ;IC74hc595.c: 40: a = a/10;
-"40
-[e = _a -> / -> _a `i -> 10 `i `uc ]
-[; ;IC74hc595.c: 41: t2 = a%10;
-"41
-[e = _t2 -> % -> _a `i -> 10 `i `uc ]
-[; ;IC74hc595.c: 42: t2 = 0x0F & t2;
-"42
-[e = _t2 -> & -> 15 `i -> _t2 `i `uc ]
-[; ;IC74hc595.c: 43: t2 = t2 << 4;
-"43
-[e = _t2 -> << -> _t2 `i -> 4 `i `uc ]
-[; ;IC74hc595.c: 44: t2 = 0xF0 & t2;
-"44
-[e = _t2 -> & -> 240 `i -> _t2 `i `uc ]
-[; ;IC74hc595.c: 45: t1 = t1 | t2;
-"45
-[e = _t1 -> | -> _t1 `i -> _t2 `i `uc ]
-[; ;IC74hc595.c: 46: return t1;
-"46
-[e ) _t1 ]
-[e $UE 144  ]
-[; ;IC74hc595.c: 47: }
-"47
-[e :UE 144 ]
+[; ;rtc.c: 97: I2C_Start();
+"97
+[e ( _I2C_Start ..  ]
+[; ;rtc.c: 99: I2C_Write(0xD0u);
+"99
+[e ( _I2C_Write (1 -> -> 208 `ui `uc ]
+[; ;rtc.c: 100: I2C_Write(0x00u);
+"100
+[e ( _I2C_Write (1 -> -> 0 `ui `uc ]
+[; ;rtc.c: 102: I2C_Write(rtc->sec);
+"102
+[e ( _I2C_Write (1 . *U _rtc 0 ]
+[; ;rtc.c: 103: I2C_Write(rtc->min);
+"103
+[e ( _I2C_Write (1 . *U _rtc 1 ]
+[; ;rtc.c: 104: I2C_Write(rtc->hour);
+"104
+[e ( _I2C_Write (1 . *U _rtc 2 ]
+[; ;rtc.c: 105: I2C_Write(rtc->weekDay);
+"105
+[e ( _I2C_Write (1 . *U _rtc 3 ]
+[; ;rtc.c: 106: I2C_Write(rtc->date);
+"106
+[e ( _I2C_Write (1 . *U _rtc 4 ]
+[; ;rtc.c: 107: I2C_Write(rtc->month);
+"107
+[e ( _I2C_Write (1 . *U _rtc 5 ]
+[; ;rtc.c: 108: I2C_Write(rtc->year);
+"108
+[e ( _I2C_Write (1 . *U _rtc 6 ]
+[; ;rtc.c: 110: I2C_Stop();
+"110
+[e ( _I2C_Stop ..  ]
+[; ;rtc.c: 111: }
+"111
+[e :UE 140 ]
+}
+"131
+[v _RTC_GetDateTime `(v ~T0 @X0 1 ef1`*S1 ]
+"132
+{
+[; ;rtc.c: 131: void RTC_GetDateTime(rtc_t *rtc)
+[; ;rtc.c: 132: {
+[e :U _RTC_GetDateTime ]
+"131
+[v _rtc `*S1 ~T0 @X0 1 r1 ]
+"132
+[f ]
+[; ;rtc.c: 133: I2C_Start();
+"133
+[e ( _I2C_Start ..  ]
+[; ;rtc.c: 135: I2C_Write(0xD0u);
+"135
+[e ( _I2C_Write (1 -> -> 208 `ui `uc ]
+[; ;rtc.c: 136: I2C_Write(0x00u);
+"136
+[e ( _I2C_Write (1 -> -> 0 `ui `uc ]
+[; ;rtc.c: 138: I2C_Stop();
+"138
+[e ( _I2C_Stop ..  ]
+[; ;rtc.c: 140: I2C_Start();
+"140
+[e ( _I2C_Start ..  ]
+[; ;rtc.c: 141: I2C_Write(0xD1u);
+"141
+[e ( _I2C_Write (1 -> -> 209 `ui `uc ]
+[; ;rtc.c: 143: rtc->sec = I2C_Read(1);
+"143
+[e = . *U _rtc 0 ( _I2C_Read (1 -> -> 1 `i `uc ]
+[; ;rtc.c: 144: rtc->min = I2C_Read(1);
+"144
+[e = . *U _rtc 1 ( _I2C_Read (1 -> -> 1 `i `uc ]
+[; ;rtc.c: 145: rtc->hour= I2C_Read(1);
+"145
+[e = . *U _rtc 2 ( _I2C_Read (1 -> -> 1 `i `uc ]
+[; ;rtc.c: 146: rtc->weekDay = I2C_Read(1);
+"146
+[e = . *U _rtc 3 ( _I2C_Read (1 -> -> 1 `i `uc ]
+[; ;rtc.c: 147: rtc->date= I2C_Read(1);
+"147
+[e = . *U _rtc 4 ( _I2C_Read (1 -> -> 1 `i `uc ]
+[; ;rtc.c: 148: rtc->month=I2C_Read(1);
+"148
+[e = . *U _rtc 5 ( _I2C_Read (1 -> -> 1 `i `uc ]
+[; ;rtc.c: 149: rtc->year =I2C_Read(0);
+"149
+[e = . *U _rtc 6 ( _I2C_Read (1 -> -> 0 `i `uc ]
+[; ;rtc.c: 151: I2C_Stop();
+"151
+[e ( _I2C_Stop ..  ]
+[; ;rtc.c: 152: }
+"152
+[e :UE 141 ]
 }
