@@ -112,13 +112,11 @@ int main()
             DELAY_ms(100);
             if(BUTTON_MODE == 0)    //If pressed
             {
-                ui8SetMode = 1;
+                ui8SetMode++;
             }
             
         }
         
-        if(ui8SetMode!= NOCHANGE)
-        {
             if(BUTTON_MODE == 0)    //If pressed mode button
             {
                 DELAY_ms(100);
@@ -142,7 +140,7 @@ int main()
             }
             /*  Get date and time before process    */
             RTC_GetDateTime(&rtc);
-            ucSec = ui8Hex2DECDisplay(rtc.sec);   
+            ucSec = rtc.sec;   
             ucMin = ui8Hex2DECDisplay(rtc.min);        
             ucHours = ui8Hex2DECDisplay(rtc.hour);        
             ucDate = ui8Hex2DECDisplay(rtc.date);        
@@ -157,14 +155,15 @@ int main()
                     if(ui8SetValue == 1)
                     {
                         ui8SetValue = 0;
-                        ucSec++;
+                        ucSec = 56;
                         if(ucSec >= 60)
                         {
                             ucSec = 0;
                         }                    
                     }
+                    
 
-                    vDisplay(1,2,3,4);
+                    vDisplay(H_SYMBOL,0,ucSec/10, ucSec%10);
 
                     break;
                 }
@@ -179,6 +178,7 @@ int main()
                             ucMin = 0;
                         }
                     }
+                    vDisplay(0,0,0,ui8SetMode);
                     break;
                 }
                 case HOUR:
@@ -192,6 +192,7 @@ int main()
                             ucHours = 0;
                         }
                     }
+                    vDisplay(0,0,0,ui8SetMode);
                     break;
                 }
                 case DAY:
@@ -205,6 +206,7 @@ int main()
                             ucDate = 0;
                         }
                     }
+                    vDisplay(0,0,0,ui8SetMode);
                     break;
                 }
                 case MONTH:
@@ -218,6 +220,7 @@ int main()
                             ucMonth = 0;
                         }
                     }
+                    vDisplay(0,0,0,ui8SetMode);
                     break;
                 }
                 case YEAR:
@@ -231,10 +234,13 @@ int main()
                             ucYear = 0;
                         }
                     }
+                    vDisplay(0,0,0,ui8SetMode);
                     break;
                 }
                 case WEEKDAY:
                 {   
+                    vDisplay(0,0,0,ui8SetMode);
+                    break;
 
                 }
                 case ENDMODE:
@@ -249,20 +255,17 @@ int main()
 
                     /*  Save rtc time to DS1307   */
                     RTC_SetDateTime(&rtc);
+                    ui8SetMode = 0;
+//                    vDisplay(((rtc.min & 0xF0) >> 4), (rtc.min & 0x0F),((rtc.sec & 0xF0) >> 4), (rtc.sec & 0x0F));
+                    vDisplay(1,2,3,4);
                     break;
                 }
-                default:
+                default: //NOCHANGE
                 {
+                    vDisplay(((0x25 & 0xF0) >> 4), (0x25 & 0x0F),((0x17 & 0xF0) >> 4), (0x17 & 0x0F));
                     break;
                 }
             }
-                
-        }
-        else
-        {
-        //Normal Display
-          vDisplay(5,6,7,8);
-        }
     }
 
     return (0);

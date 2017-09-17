@@ -1529,7 +1529,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 192: extern unsigned char __resetbits;
 [; ;pic.h: 193: extern __bit __powerdown;
 [; ;pic.h: 194: extern __bit __timeout;
-"71 userdefine.h
+"72 userdefine.h
 [v _ucBCD_ARR `uc ~T0 @X0 -> 10 `i e ]
 [i _ucBCD_ARR
 :U ..
@@ -1545,7 +1545,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> -> 246 `i `uc
 ..
 ]
-[; ;userdefine.h: 71: unsigned char ucBCD_ARR[10]= {0xFC,0x60,0xDA,0xF2,0x66,0xB6,0xBE,0xE0,0xFE,0xF6};
+[; ;userdefine.h: 72: unsigned char ucBCD_ARR[10]= {0xFC,0x60,0xDA,0xF2,0x66,0xB6,0xBE,0xE0,0xFE,0xF6};
 [; ;delay.h: 67: void DELAY_us(uint16_t us_count);
 [; ;delay.h: 68: void DELAY_ms(uint16_t ms_count);
 [; ;delay.h: 69: void DELAY_sec(uint16_t var_delaySecCount_u16);

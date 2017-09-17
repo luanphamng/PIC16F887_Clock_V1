@@ -193,42 +193,42 @@
 [v _TRISC3 TRISC3 `VEb  1 e 0 @1083 ]
 "4156
 [v _TRISC4 TRISC4 `VEb  1 e 0 @1084 ]
-"71 /media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/userdefine.h
+"72 /media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/userdefine.h
 [v _ucBCD_ARR ucBCD_ARR `[10]uc  1 e 10 0 ]
 "23 /media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
 [v _main main `(i  1 e 2 0 ]
 {
 [s S167 . 7 `uc 1 sec 1 0 `uc 1 min 1 1 `uc 1 hour 1 2 `uc 1 weekDay 1 3 `uc 1 date 1 4 `uc 1 month 1 5 `uc 1 year 1 6 ]
 "72
-[v main@rtc rtc `S167  1 a 7 14 ]
-"70
-[v main@ui8SetValue ui8SetValue `uc  1 a 1 13 ]
+[v main@rtc rtc `S167  1 a 7 17 ]
 "69
-[v main@ui8SetMode ui8SetMode `uc  1 a 1 12 ]
-"66
-[v main@ucMonth ucMonth `uc  1 a 1 11 ]
-"65
-[v main@ucDate ucDate `uc  1 a 1 10 ]
-"64
-[v main@ucHours ucHours `uc  1 a 1 9 ]
-"63
-[v main@ucMin ucMin `uc  1 a 1 8 ]
+[v main@ui8SetMode ui8SetMode `uc  1 a 1 16 ]
+"70
+[v main@ui8SetValue ui8SetValue `uc  1 a 1 15 ]
 "62
-[v main@ucSec ucSec `uc  1 a 1 7 ]
+[v main@ucSec ucSec `uc  1 a 1 14 ]
+"66
+[v main@ucMonth ucMonth `uc  1 a 1 13 ]
+"65
+[v main@ucDate ucDate `uc  1 a 1 12 ]
+"64
+[v main@ucHours ucHours `uc  1 a 1 11 ]
+"63
+[v main@ucMin ucMin `uc  1 a 1 10 ]
 "67
-[v main@ucYear ucYear `uc  1 a 1 6 ]
-"269
+[v main@ucYear ucYear `uc  1 a 1 9 ]
+"272
 } 0
 "12 /media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
 [v _vDisplay vDisplay `(v  1 e 1 0 ]
 {
 [v vDisplay@ui8First ui8First `uc  1 a 1 wreg ]
 [v vDisplay@ui8First ui8First `uc  1 a 1 wreg ]
-[v vDisplay@ui8Second ui8Second `uc  1 p 1 4 ]
-[v vDisplay@ui8Thrd ui8Thrd `uc  1 p 1 5 ]
-[v vDisplay@ui8Fourth ui8Fourth `uc  1 p 1 6 ]
+[v vDisplay@ui8Second ui8Second `uc  1 p 1 9 ]
+[v vDisplay@ui8Thrd ui8Thrd `uc  1 p 1 10 ]
+[v vDisplay@ui8Fourth ui8Fourth `uc  1 p 1 11 ]
 "14
-[v vDisplay@ui8First ui8First `uc  1 a 1 8 ]
+[v vDisplay@ui8First ui8First `uc  1 a 1 13 ]
 "33
 } 0
 "75 /media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/delay.c

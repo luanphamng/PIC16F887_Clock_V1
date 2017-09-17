@@ -39,6 +39,7 @@
 #define LED_HOUR_DOZEN      0xFB
 #define LED_CLEAR           0x3C    /*  Clear all LED   */
 #define DELAY_BTW_LED       5       /*  milisecond  */
+#define DELAY_BUTTON        100     /*  milisecond  */
 
 #define BUTTON_ADJUST     PORTBbits.RB0
 

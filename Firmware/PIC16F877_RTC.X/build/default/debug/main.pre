@@ -2181,7 +2181,7 @@ void DELAY_us(uint16_t us_count);
 void DELAY_ms(uint16_t ms_count);
 void DELAY_sec(uint16_t var_delaySecCount_u16);
 
-# 71 "userdefine.h"
+# 72 "userdefine.h"
 unsigned char ucBCD_ARR[10]= {0xFC,0x60,0xDA,0xF2,0x66,0xB6,0xBE,0xE0,0xFE,0xF6};
 
 # 48 "display.h"
@@ -2277,13 +2277,24 @@ if(PORTBbits.RB1 == 0)
 DELAY_ms(100);
 if(PORTBbits.RB1 == 0)
 {
-ui8SetMode = 1;
+ui8SetMode++;
 }
 
 }
 
-if(ui8SetMode!= 0)
+if(PORTBbits.RB1 == 0)
 {
+DELAY_ms(100);
+if(PORTBbits.RB1 == 0)
+{
+ui8SetMode++;
+if(ui8SetMode > 8)
+{
+ui8SetMode = 0;
+}
+}
+
+}
 if(PORTBbits.RB0 == 0)
 {
 DELAY_ms(100);
@@ -2309,14 +2320,15 @@ case 1:
 if(ui8SetValue == 1)
 {
 ui8SetValue = 0;
-ucSec++;
+ucSec = 56;
 if(ucSec >= 60)
 {
 ucSec = 0;
 }
 }
 
-vDisplay(1,2,3,4);
+
+vDisplay(0x6E,0,ucSec/10, ucSec%10);
 
 break;
 }
@@ -2331,6 +2343,7 @@ if(ucMin >=60)
 ucMin = 0;
 }
 }
+vDisplay(0,0,0,ui8SetMode);
 break;
 }
 case 3:
@@ -2344,6 +2357,7 @@ if(ucHours >=13)
 ucHours = 0;
 }
 }
+vDisplay(0,0,0,ui8SetMode);
 break;
 }
 case 4:
@@ -2357,6 +2371,7 @@ if(ucDate >=31)
 ucDate = 0;
 }
 }
+vDisplay(0,0,0,ui8SetMode);
 break;
 }
 case 5:
@@ -2370,6 +2385,7 @@ if(ucMonth >=13)
 ucMonth = 0;
 }
 }
+vDisplay(0,0,0,ui8SetMode);
 break;
 }
 case 6:
@@ -2383,10 +2399,13 @@ if(ucYear >= 2099)
 ucYear = 0;
 }
 }
+vDisplay(0,0,0,ui8SetMode);
 break;
 }
 case 7:
 {
+vDisplay(0,0,0,ui8SetMode);
+break;
 
 }
 case 8:
@@ -2401,19 +2420,15 @@ rtc.year = ui8Dec2HexDisplay(ucYear);
 
 
 RTC_SetDateTime(&rtc);
+ui8SetMode = 0;
+vDisplay(0,0,0,ui8SetMode);
 break;
 }
 default:
 {
+vDisplay(0,0,0,0);
 break;
 }
-}
-
-}
-else
-{
-
-vDisplay(5,6,7,8);
 }
 }
 

@@ -13,32 +13,32 @@
 %PSECTS
 $dist/default/production/PIC16F877_RTC.X.production.obj
 cinit CODE 0 7F0 7F0 10 2
-text1 CODE 0 560 560 64 2
-text2 CODE 0 3BE 3BE 14 2
-text3 CODE 0 376 376 B 2
-text4 CODE 0 3D2 3D2 16 2
-text5 CODE 0 39C 39C 11 2
-text6 CODE 0 428 428 3A 2
-text7 CODE 0 462 462 4B 2
-text8 CODE 0 4AD 4AD 59 2
-text9 CODE 0 506 506 5A 2
-text10 CODE 0 408 408 20 2
-text11 CODE 0 38E 38E E 2
-text12 CODE 0 5C4 5C4 7F 2
-text13 CODE 0 381 381 D 2
-text14 CODE 0 34D 34D 6 2
-text15 CODE 0 347 347 6 2
-text16 CODE 0 3E8 3E8 20 2
-text17 CODE 0 36B 36B B 2
-text18 CODE 0 35A 35A 7 2
-text19 CODE 0 353 353 7 2
-maintext CODE 0 643 643 1AD 2
-cstackCOMMON COMMON 1 70 70 C 1
-cstackBANK0 BANK0 1 20 20 15 1
-inittext CODE 0 3AD 3AD 11 2
-idataBANK0 CODE 0 361 361 A 2
-dataBANK0 BANK0 1 35 35 A 1
-$/tmp/xcXK2nGro.obj
+text1 CODE 0 52A 52A 64 2
+text2 CODE 0 388 388 14 2
+text3 CODE 0 340 340 B 2
+text4 CODE 0 39C 39C 16 2
+text5 CODE 0 366 366 11 2
+text6 CODE 0 3F2 3F2 3A 2
+text7 CODE 0 42C 42C 4B 2
+text8 CODE 0 477 477 59 2
+text9 CODE 0 4D0 4D0 5A 2
+text10 CODE 0 3D2 3D2 20 2
+text11 CODE 0 358 358 E 2
+text12 CODE 0 58E 58E 7F 2
+text13 CODE 0 34B 34B D 2
+text14 CODE 0 317 317 6 2
+text15 CODE 0 311 311 6 2
+text16 CODE 0 3B2 3B2 20 2
+text17 CODE 0 335 335 B 2
+text18 CODE 0 324 324 7 2
+text19 CODE 0 31D 31D 7 2
+maintext CODE 0 60D 60D 1E3 2
+cstackCOMMON COMMON 1 70 70 E 1
+cstackBANK0 BANK0 1 20 20 18 1
+inittext CODE 0 377 377 11 2
+idataBANK0 CODE 0 32B 32B A 2
+dataBANK0 BANK0 1 38 38 A 1
+$/tmp/xcX1ZPint.obj
 end_init CODE 0 0 0 3 2
 config CONFIG 0 2007 2007 2 2
 # %UNUSED Section
@@ -47,31 +47,30 @@ config CONFIG 0 2007 2007 2 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 3F-6F 1
+RAM 42-6F 1
 RAM A0-EF 1
 RAM 110-16F 1
 RAM 190-1EF 1
-BANK0 3F-6F 1
+BANK0 42-6F 1
 BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
-CONST 3-346 2
+CONST 3-310 2
 CONST 800-1FFF 2
-ENTRY 3-346 2
+ENTRY 3-310 2
 ENTRY 800-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
-CODE 3-346 2
+CODE 3-310 2
 CODE 800-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
 SFR3 180-18F 1
-COMMON 7C-7D 1
 EEDATA 2100-21FF 2
-STRCODE 3-346 2
+STRCODE 3-310 2
 STRCODE 800-1FFF 2
-STRING 3-346 2
+STRING 3-310 2
 STRING 800-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -87,315 +86,315 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production/PIC16F877_RTC.X.production.obj
-7F0 cinit CODE >926:/tmp/xcX3kXWo3
-7F0 cinit CODE >929:/tmp/xcX3kXWo3
-7F0 cinit CODE >970:/tmp/xcX3kXWo3
-7F1 cinit CODE >971:/tmp/xcX3kXWo3
-7F2 cinit CODE >972:/tmp/xcX3kXWo3
-7F3 cinit CODE >973:/tmp/xcX3kXWo3
-7F4 cinit CODE >974:/tmp/xcX3kXWo3
-7F5 cinit CODE >975:/tmp/xcX3kXWo3
-7F6 cinit CODE >976:/tmp/xcX3kXWo3
-7F7 cinit CODE >977:/tmp/xcX3kXWo3
-7F8 cinit CODE >978:/tmp/xcX3kXWo3
-7F9 cinit CODE >979:/tmp/xcX3kXWo3
-7FC cinit CODE >985:/tmp/xcX3kXWo3
-7FC cinit CODE >987:/tmp/xcX3kXWo3
-7FD cinit CODE >988:/tmp/xcX3kXWo3
-353 text19 CODE >279:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-353 text19 CODE >281:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-356 text19 CODE >282:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-357 text19 CODE >283:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-35A text18 CODE >299:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-35A text18 CODE >301:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-35D text18 CODE >302:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-35E text18 CODE >303:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-36B text17 CODE >258:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-36B text17 CODE >260:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-3E8 text16 CODE >214:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-3E9 text16 CODE >216:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-3EA text16 CODE >218:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-3ED text16 CODE >219:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-3EF text16 CODE >220:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-3F5 text16 CODE >221:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-3FA text16 CODE >223:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-3FD text16 CODE >225:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-402 text16 CODE >226:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-403 text16 CODE >229:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-406 text16 CODE >232:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-347 text15 CODE >118:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-347 text15 CODE >120:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-34A text15 CODE >121:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-34D text14 CODE >147:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-34D text14 CODE >149:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-350 text14 CODE >150:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-381 text13 CODE >179:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-382 text13 CODE >183:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-386 text13 CODE >184:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-38A text13 CODE >185:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-38D text13 CODE >186:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-5C4 text12 CODE >131:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-5C5 text12 CODE >133:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-5CA text12 CODE >135:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-5D0 text12 CODE >136:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-5D6 text12 CODE >138:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-5DB text12 CODE >140:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-5E0 text12 CODE >141:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-5E6 text12 CODE >143:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-5F2 text12 CODE >144:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-5FE text12 CODE >145:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-60B text12 CODE >146:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-618 text12 CODE >147:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-625 text12 CODE >148:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-632 text12 CODE >149:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-63F text12 CODE >151:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-642 text12 CODE >152:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-38E text11 CODE >87:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-38E text11 CODE >89:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-391 text11 CODE >90:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-392 text11 CODE >92:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-393 text11 CODE >93:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-397 text11 CODE >94:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-39B text11 CODE >95:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
-408 text10 CODE >57:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-408 text10 CODE >59:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-40D text10 CODE >60:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-412 text10 CODE >62:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-418 text10 CODE >63:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-41E text10 CODE >65:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-424 text10 CODE >67:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-427 text10 CODE >68:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-506 text9 CODE >95:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-507 text9 CODE >97:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-50C text9 CODE >99:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-512 text9 CODE >100:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-518 text9 CODE >102:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-521 text9 CODE >103:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-52A text9 CODE >104:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-534 text9 CODE >105:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-53E text9 CODE >106:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-548 text9 CODE >107:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-552 text9 CODE >108:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-55C text9 CODE >110:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-55F text9 CODE >111:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
-4AD text8 CODE >6:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
-4AD text8 CODE >14:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
-4AE text8 CODE >15:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
-4B0 text8 CODE >16:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
-4B5 text8 CODE >17:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
-4B7 text8 CODE >19:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
-4B9 text8 CODE >20:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
-4BE text8 CODE >21:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
-4C2 text8 CODE >23:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
-4C4 text8 CODE >24:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
-4C8 text8 CODE >25:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
-4CA text8 CODE >26:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
-4CC text8 CODE >27:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
-4D3 text8 CODE >28:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
-4D7 text8 CODE >26:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
-4D8 text8 CODE >31:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
-4DF text8 CODE >32:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
-4E7 text8 CODE >33:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
-4ED text8 CODE >34:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
-4EE text8 CODE >36:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
-4F5 text8 CODE >37:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
-4F9 text8 CODE >39:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
-4FC text8 CODE >40:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
-501 text8 CODE >41:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
-462 text7 CODE >6:/usr/microchip/xc8/v1.43/sources/common/awmod.c
-462 text7 CODE >13:/usr/microchip/xc8/v1.43/sources/common/awmod.c
-463 text7 CODE >14:/usr/microchip/xc8/v1.43/sources/common/awmod.c
-465 text7 CODE >15:/usr/microchip/xc8/v1.43/sources/common/awmod.c
-46A text7 CODE >16:/usr/microchip/xc8/v1.43/sources/common/awmod.c
-46C text7 CODE >18:/usr/microchip/xc8/v1.43/sources/common/awmod.c
-46E text7 CODE >19:/usr/microchip/xc8/v1.43/sources/common/awmod.c
-473 text7 CODE >20:/usr/microchip/xc8/v1.43/sources/common/awmod.c
-477 text7 CODE >21:/usr/microchip/xc8/v1.43/sources/common/awmod.c
-479 text7 CODE >22:/usr/microchip/xc8/v1.43/sources/common/awmod.c
-47B text7 CODE >23:/usr/microchip/xc8/v1.43/sources/common/awmod.c
-482 text7 CODE >24:/usr/microchip/xc8/v1.43/sources/common/awmod.c
-486 text7 CODE >22:/usr/microchip/xc8/v1.43/sources/common/awmod.c
-487 text7 CODE >27:/usr/microchip/xc8/v1.43/sources/common/awmod.c
-48F text7 CODE >28:/usr/microchip/xc8/v1.43/sources/common/awmod.c
-495 text7 CODE >29:/usr/microchip/xc8/v1.43/sources/common/awmod.c
-49C text7 CODE >30:/usr/microchip/xc8/v1.43/sources/common/awmod.c
-4A0 text7 CODE >32:/usr/microchip/xc8/v1.43/sources/common/awmod.c
-4A3 text7 CODE >33:/usr/microchip/xc8/v1.43/sources/common/awmod.c
-4A8 text7 CODE >34:/usr/microchip/xc8/v1.43/sources/common/awmod.c
-428 text6 CODE >35:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
-42B text6 CODE >40:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
-441 text6 CODE >41:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
-445 text6 CODE >42:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
-448 text6 CODE >44:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
-45C text6 CODE >45:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
-460 text6 CODE >47:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
-39C text5 CODE >4:/usr/microchip/xc8/v1.43/sources/common/Umul8.c
-39D text5 CODE >6:/usr/microchip/xc8/v1.43/sources/common/Umul8.c
-39E text5 CODE >43:/usr/microchip/xc8/v1.43/sources/common/Umul8.c
-3A0 text5 CODE >44:/usr/microchip/xc8/v1.43/sources/common/Umul8.c
-3A4 text5 CODE >45:/usr/microchip/xc8/v1.43/sources/common/Umul8.c
-3A6 text5 CODE >46:/usr/microchip/xc8/v1.43/sources/common/Umul8.c
-3A8 text5 CODE >47:/usr/microchip/xc8/v1.43/sources/common/Umul8.c
-3AB text5 CODE >50:/usr/microchip/xc8/v1.43/sources/common/Umul8.c
-3D2 text4 CODE >50:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
-3D3 text4 CODE >54:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
-3D8 text4 CODE >55:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
-3DB text4 CODE >56:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
-376 text3 CODE >56:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/delay.c
-376 text3 CODE >58:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/delay.c
-37A text3 CODE >60:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/delay.c
-380 text3 CODE >58:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/delay.c
-3BE text2 CODE >75:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/delay.c
-3BE text2 CODE >77:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/delay.c
-3C2 text2 CODE >79:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/delay.c
-3CB text2 CODE >80:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/delay.c
-3D1 text2 CODE >77:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/delay.c
-560 text1 CODE >12:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
-561 text1 CODE >14:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
-569 text1 CODE >15:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
-56D text1 CODE >16:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
-571 text1 CODE >17:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
-57A text1 CODE >19:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
-582 text1 CODE >20:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
-586 text1 CODE >21:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
-58A text1 CODE >22:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
-593 text1 CODE >24:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
-59B text1 CODE >25:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
-59F text1 CODE >26:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
-5A3 text1 CODE >27:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
-5AC text1 CODE >29:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
-5B4 text1 CODE >30:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
-5B8 text1 CODE >31:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
-5BC text1 CODE >32:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
-5C3 text1 CODE >33:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
-643 maintext CODE >23:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-643 maintext CODE >27:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-646 maintext CODE >28:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-647 maintext CODE >29:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-648 maintext CODE >31:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-649 maintext CODE >33:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-64A maintext CODE >34:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-64B maintext CODE >35:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-64C maintext CODE >36:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-64D maintext CODE >37:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-64E maintext CODE >38:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-64F maintext CODE >40:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-650 maintext CODE >42:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-651 maintext CODE >44:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-652 maintext CODE >45:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-653 maintext CODE >46:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-654 maintext CODE >47:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-655 maintext CODE >49:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-658 maintext CODE >50:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-659 maintext CODE >51:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-65A maintext CODE >52:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-65B maintext CODE >53:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-65C maintext CODE >54:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-65D maintext CODE >55:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-65E maintext CODE >57:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-661 maintext CODE >59:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-665 maintext CODE >76:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-666 maintext CODE >77:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-667 maintext CODE >78:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-668 maintext CODE >79:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-669 maintext CODE >80:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-66A maintext CODE >81:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-66B maintext CODE >83:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-66C maintext CODE >84:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-66D maintext CODE >87:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-672 maintext CODE >91:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-675 maintext CODE >92:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-679 maintext CODE >93:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-67D maintext CODE >95:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-681 maintext CODE >96:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-685 maintext CODE >97:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-689 maintext CODE >98:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-68D maintext CODE >153:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-68E maintext CODE >157:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-691 maintext CODE >159:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-692 maintext CODE >160:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-696 maintext CODE >161:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-699 maintext CODE >163:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-69A maintext CODE >167:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-6AC maintext CODE >169:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-6AD maintext CODE >173:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-6B2 maintext CODE >175:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-6B3 maintext CODE >176:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-6B7 maintext CODE >177:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-6BB maintext CODE >179:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-6BC maintext CODE >182:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-6BD maintext CODE >186:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-6C0 maintext CODE >188:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-6C1 maintext CODE >189:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-6C5 maintext CODE >190:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-6C9 maintext CODE >192:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-6CA maintext CODE >195:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-6CB maintext CODE >199:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-6CE maintext CODE >201:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-6CF maintext CODE >202:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-6D3 maintext CODE >203:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-6D7 maintext CODE >205:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-6D8 maintext CODE >208:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-6D9 maintext CODE >212:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-6DC maintext CODE >214:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-6DD maintext CODE >215:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-6E1 maintext CODE >216:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-6E5 maintext CODE >218:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-6E6 maintext CODE >221:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-6E7 maintext CODE >225:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-6EA maintext CODE >227:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-6EB maintext CODE >228:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-6EF maintext CODE >229:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-6F0 maintext CODE >243:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-6FB maintext CODE >244:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-706 maintext CODE >245:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-711 maintext CODE >246:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-71C maintext CODE >247:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-727 maintext CODE >248:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-732 maintext CODE >251:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-738 maintext CODE >110:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-73C maintext CODE >112:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-745 maintext CODE >113:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-749 maintext CODE >115:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-74B maintext CODE >120:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-74E maintext CODE >122:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-750 maintext CODE >124:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-759 maintext CODE >125:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-75D maintext CODE >127:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-761 maintext CODE >128:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-764 maintext CODE >130:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-765 maintext CODE >135:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-767 maintext CODE >137:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-770 maintext CODE >138:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-774 maintext CODE >140:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-776 maintext CODE >144:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-77C maintext CODE >145:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-789 maintext CODE >146:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-794 maintext CODE >147:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-79F maintext CODE >148:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-7AA maintext CODE >149:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-7B5 maintext CODE >150:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-7C0 maintext CODE >153:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-7DC maintext CODE >260:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-7DD maintext CODE >264:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+7F0 cinit CODE >928:/tmp/xcX5AtPyk
+7F0 cinit CODE >931:/tmp/xcX5AtPyk
+7F0 cinit CODE >972:/tmp/xcX5AtPyk
+7F1 cinit CODE >973:/tmp/xcX5AtPyk
+7F2 cinit CODE >974:/tmp/xcX5AtPyk
+7F3 cinit CODE >975:/tmp/xcX5AtPyk
+7F4 cinit CODE >976:/tmp/xcX5AtPyk
+7F5 cinit CODE >977:/tmp/xcX5AtPyk
+7F6 cinit CODE >978:/tmp/xcX5AtPyk
+7F7 cinit CODE >979:/tmp/xcX5AtPyk
+7F8 cinit CODE >980:/tmp/xcX5AtPyk
+7F9 cinit CODE >981:/tmp/xcX5AtPyk
+7FC cinit CODE >987:/tmp/xcX5AtPyk
+7FC cinit CODE >989:/tmp/xcX5AtPyk
+7FD cinit CODE >990:/tmp/xcX5AtPyk
+31D text19 CODE >279:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+31D text19 CODE >281:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+320 text19 CODE >282:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+321 text19 CODE >283:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+324 text18 CODE >299:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+324 text18 CODE >301:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+327 text18 CODE >302:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+328 text18 CODE >303:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+335 text17 CODE >258:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+335 text17 CODE >260:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+3B2 text16 CODE >214:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+3B3 text16 CODE >216:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+3B4 text16 CODE >218:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+3B7 text16 CODE >219:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+3B9 text16 CODE >220:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+3BF text16 CODE >221:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+3C4 text16 CODE >223:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+3C7 text16 CODE >225:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+3CC text16 CODE >226:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+3CD text16 CODE >229:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+3D0 text16 CODE >232:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+311 text15 CODE >118:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+311 text15 CODE >120:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+314 text15 CODE >121:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+317 text14 CODE >147:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+317 text14 CODE >149:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+31A text14 CODE >150:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+34B text13 CODE >179:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+34C text13 CODE >183:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+350 text13 CODE >184:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+354 text13 CODE >185:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+357 text13 CODE >186:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+58E text12 CODE >131:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+58F text12 CODE >133:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+594 text12 CODE >135:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+59A text12 CODE >136:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+5A0 text12 CODE >138:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+5A5 text12 CODE >140:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+5AA text12 CODE >141:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+5B0 text12 CODE >143:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+5BC text12 CODE >144:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+5C8 text12 CODE >145:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+5D5 text12 CODE >146:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+5E2 text12 CODE >147:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+5EF text12 CODE >148:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+5FC text12 CODE >149:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+609 text12 CODE >151:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+60C text12 CODE >152:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+358 text11 CODE >87:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+358 text11 CODE >89:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+35B text11 CODE >90:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+35C text11 CODE >92:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+35D text11 CODE >93:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+361 text11 CODE >94:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+365 text11 CODE >95:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/i2c.c
+3D2 text10 CODE >57:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+3D2 text10 CODE >59:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+3D7 text10 CODE >60:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+3DC text10 CODE >62:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+3E2 text10 CODE >63:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+3E8 text10 CODE >65:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+3EE text10 CODE >67:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+3F1 text10 CODE >68:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+4D0 text9 CODE >95:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+4D1 text9 CODE >97:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+4D6 text9 CODE >99:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+4DC text9 CODE >100:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+4E2 text9 CODE >102:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+4EB text9 CODE >103:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+4F4 text9 CODE >104:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+4FE text9 CODE >105:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+508 text9 CODE >106:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+512 text9 CODE >107:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+51C text9 CODE >108:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+526 text9 CODE >110:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+529 text9 CODE >111:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/rtc.c
+477 text8 CODE >6:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
+477 text8 CODE >14:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
+478 text8 CODE >15:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
+47A text8 CODE >16:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
+47F text8 CODE >17:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
+481 text8 CODE >19:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
+483 text8 CODE >20:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
+488 text8 CODE >21:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
+48C text8 CODE >23:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
+48E text8 CODE >24:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
+492 text8 CODE >25:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
+494 text8 CODE >26:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
+496 text8 CODE >27:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
+49D text8 CODE >28:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
+4A1 text8 CODE >26:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
+4A2 text8 CODE >31:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
+4A9 text8 CODE >32:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
+4B1 text8 CODE >33:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
+4B7 text8 CODE >34:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
+4B8 text8 CODE >36:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
+4BF text8 CODE >37:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
+4C3 text8 CODE >39:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
+4C6 text8 CODE >40:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
+4CB text8 CODE >41:/usr/microchip/xc8/v1.43/sources/common/awdiv.c
+42C text7 CODE >6:/usr/microchip/xc8/v1.43/sources/common/awmod.c
+42C text7 CODE >13:/usr/microchip/xc8/v1.43/sources/common/awmod.c
+42D text7 CODE >14:/usr/microchip/xc8/v1.43/sources/common/awmod.c
+42F text7 CODE >15:/usr/microchip/xc8/v1.43/sources/common/awmod.c
+434 text7 CODE >16:/usr/microchip/xc8/v1.43/sources/common/awmod.c
+436 text7 CODE >18:/usr/microchip/xc8/v1.43/sources/common/awmod.c
+438 text7 CODE >19:/usr/microchip/xc8/v1.43/sources/common/awmod.c
+43D text7 CODE >20:/usr/microchip/xc8/v1.43/sources/common/awmod.c
+441 text7 CODE >21:/usr/microchip/xc8/v1.43/sources/common/awmod.c
+443 text7 CODE >22:/usr/microchip/xc8/v1.43/sources/common/awmod.c
+445 text7 CODE >23:/usr/microchip/xc8/v1.43/sources/common/awmod.c
+44C text7 CODE >24:/usr/microchip/xc8/v1.43/sources/common/awmod.c
+450 text7 CODE >22:/usr/microchip/xc8/v1.43/sources/common/awmod.c
+451 text7 CODE >27:/usr/microchip/xc8/v1.43/sources/common/awmod.c
+459 text7 CODE >28:/usr/microchip/xc8/v1.43/sources/common/awmod.c
+45F text7 CODE >29:/usr/microchip/xc8/v1.43/sources/common/awmod.c
+466 text7 CODE >30:/usr/microchip/xc8/v1.43/sources/common/awmod.c
+46A text7 CODE >32:/usr/microchip/xc8/v1.43/sources/common/awmod.c
+46D text7 CODE >33:/usr/microchip/xc8/v1.43/sources/common/awmod.c
+472 text7 CODE >34:/usr/microchip/xc8/v1.43/sources/common/awmod.c
+3F2 text6 CODE >35:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
+3F5 text6 CODE >40:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
+40B text6 CODE >41:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
+40F text6 CODE >42:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
+412 text6 CODE >44:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
+426 text6 CODE >45:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
+42A text6 CODE >47:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
+366 text5 CODE >4:/usr/microchip/xc8/v1.43/sources/common/Umul8.c
+367 text5 CODE >6:/usr/microchip/xc8/v1.43/sources/common/Umul8.c
+368 text5 CODE >43:/usr/microchip/xc8/v1.43/sources/common/Umul8.c
+36A text5 CODE >44:/usr/microchip/xc8/v1.43/sources/common/Umul8.c
+36E text5 CODE >45:/usr/microchip/xc8/v1.43/sources/common/Umul8.c
+370 text5 CODE >46:/usr/microchip/xc8/v1.43/sources/common/Umul8.c
+372 text5 CODE >47:/usr/microchip/xc8/v1.43/sources/common/Umul8.c
+375 text5 CODE >50:/usr/microchip/xc8/v1.43/sources/common/Umul8.c
+39C text4 CODE >50:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
+39D text4 CODE >54:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
+3A2 text4 CODE >55:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
+3A5 text4 CODE >56:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
+340 text3 CODE >56:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/delay.c
+340 text3 CODE >58:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/delay.c
+344 text3 CODE >60:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/delay.c
+34A text3 CODE >58:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/delay.c
+388 text2 CODE >75:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/delay.c
+388 text2 CODE >77:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/delay.c
+38C text2 CODE >79:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/delay.c
+395 text2 CODE >80:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/delay.c
+39B text2 CODE >77:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/delay.c
+52A text1 CODE >12:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
+52B text1 CODE >14:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
+533 text1 CODE >15:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
+537 text1 CODE >16:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
+53B text1 CODE >17:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
+544 text1 CODE >19:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
+54C text1 CODE >20:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
+550 text1 CODE >21:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
+554 text1 CODE >22:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
+55D text1 CODE >24:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
+565 text1 CODE >25:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
+569 text1 CODE >26:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
+56D text1 CODE >27:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
+576 text1 CODE >29:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
+57E text1 CODE >30:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
+582 text1 CODE >31:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
+586 text1 CODE >32:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
+58D text1 CODE >33:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/display.c
+60D maintext CODE >23:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+60D maintext CODE >27:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+610 maintext CODE >28:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+611 maintext CODE >29:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+612 maintext CODE >31:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+613 maintext CODE >33:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+614 maintext CODE >34:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+615 maintext CODE >35:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+616 maintext CODE >36:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+617 maintext CODE >37:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+618 maintext CODE >38:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+619 maintext CODE >40:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+61A maintext CODE >42:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+61B maintext CODE >44:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+61C maintext CODE >45:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+61D maintext CODE >46:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+61E maintext CODE >47:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+61F maintext CODE >49:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+622 maintext CODE >50:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+623 maintext CODE >51:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+624 maintext CODE >52:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+625 maintext CODE >53:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+626 maintext CODE >54:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+627 maintext CODE >55:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+628 maintext CODE >57:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+62B maintext CODE >59:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+62F maintext CODE >76:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+630 maintext CODE >77:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+631 maintext CODE >78:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+632 maintext CODE >79:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+633 maintext CODE >80:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+634 maintext CODE >81:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+635 maintext CODE >83:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+636 maintext CODE >84:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+637 maintext CODE >87:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+63C maintext CODE >91:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+63F maintext CODE >92:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+643 maintext CODE >93:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+647 maintext CODE >95:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+64B maintext CODE >96:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+64F maintext CODE >97:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+653 maintext CODE >98:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+657 maintext CODE >151:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+658 maintext CODE >155:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+65B maintext CODE >157:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+65C maintext CODE >158:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+660 maintext CODE >159:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+663 maintext CODE >161:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+664 maintext CODE >166:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+693 maintext CODE >172:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+698 maintext CODE >174:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+699 maintext CODE >175:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+69D maintext CODE >176:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+6A0 maintext CODE >178:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+6A1 maintext CODE >181:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+6A2 maintext CODE >186:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+6A7 maintext CODE >188:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+6A8 maintext CODE >189:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+6AC maintext CODE >190:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+6AF maintext CODE >192:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+6B0 maintext CODE >195:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+6B1 maintext CODE >200:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+6B6 maintext CODE >202:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+6B7 maintext CODE >203:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+6BB maintext CODE >204:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+6BE maintext CODE >206:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+6BF maintext CODE >209:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+6C0 maintext CODE >214:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+6C5 maintext CODE >216:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+6C6 maintext CODE >217:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+6CA maintext CODE >218:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+6CD maintext CODE >220:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+6CE maintext CODE >223:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+6CF maintext CODE >228:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+6D4 maintext CODE >230:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+6D5 maintext CODE >231:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+6D9 maintext CODE >237:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+6DC maintext CODE >242:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+6E6 maintext CODE >249:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+6F3 maintext CODE >250:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+6FE maintext CODE >251:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+709 maintext CODE >252:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+714 maintext CODE >253:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+71F maintext CODE >254:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+72A maintext CODE >257:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+730 maintext CODE >258:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+733 maintext CODE >260:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+741 maintext CODE >265:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+753 maintext CODE >110:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+757 maintext CODE >112:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+760 maintext CODE >113:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+764 maintext CODE >115:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+768 maintext CODE >120:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+76A maintext CODE >122:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+773 maintext CODE >123:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+777 maintext CODE >125:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+77B maintext CODE >126:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+77E maintext CODE >128:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+77F maintext CODE >133:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+781 maintext CODE >135:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+78A maintext CODE >136:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+78E maintext CODE >138:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+790 maintext CODE >142:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+796 maintext CODE >143:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+79C maintext CODE >144:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+7A7 maintext CODE >145:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+7B2 maintext CODE >146:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+7BD maintext CODE >147:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+7C8 maintext CODE >148:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
+7D3 maintext CODE >151:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
 7EF maintext CODE >106:/media/pml/PMLDATA/05_Projects/PIC16F887_RTC/PIC16F887_Clock_V1/Firmware/PIC16F877_RTC.X/main.c
-3AD inittext CODE >944:/tmp/xcX3kXWo3
-3AD inittext CODE >945:/tmp/xcX3kXWo3
-3AE inittext CODE >946:/tmp/xcX3kXWo3
-3AF inittext CODE >947:/tmp/xcX3kXWo3
-3B0 inittext CODE >948:/tmp/xcX3kXWo3
-3B1 inittext CODE >955:/tmp/xcX3kXWo3
-3B1 inittext CODE >956:/tmp/xcX3kXWo3
-3B4 inittext CODE >957:/tmp/xcX3kXWo3
-3B5 inittext CODE >958:/tmp/xcX3kXWo3
-3B6 inittext CODE >959:/tmp/xcX3kXWo3
-3B7 inittext CODE >960:/tmp/xcX3kXWo3
-3B8 inittext CODE >961:/tmp/xcX3kXWo3
-3B9 inittext CODE >962:/tmp/xcX3kXWo3
-3BA inittext CODE >963:/tmp/xcX3kXWo3
-3BB inittext CODE >964:/tmp/xcX3kXWo3
-3BC inittext CODE >965:/tmp/xcX3kXWo3
-3BD inittext CODE >966:/tmp/xcX3kXWo3
+377 inittext CODE >946:/tmp/xcX5AtPyk
+377 inittext CODE >947:/tmp/xcX5AtPyk
+378 inittext CODE >948:/tmp/xcX5AtPyk
+379 inittext CODE >949:/tmp/xcX5AtPyk
+37A inittext CODE >950:/tmp/xcX5AtPyk
+37B inittext CODE >957:/tmp/xcX5AtPyk
+37B inittext CODE >958:/tmp/xcX5AtPyk
+37E inittext CODE >959:/tmp/xcX5AtPyk
+37F inittext CODE >960:/tmp/xcX5AtPyk
+380 inittext CODE >961:/tmp/xcX5AtPyk
+381 inittext CODE >962:/tmp/xcX5AtPyk
+382 inittext CODE >963:/tmp/xcX5AtPyk
+383 inittext CODE >964:/tmp/xcX5AtPyk
+384 inittext CODE >965:/tmp/xcX5AtPyk
+385 inittext CODE >966:/tmp/xcX5AtPyk
+386 inittext CODE >967:/tmp/xcX5AtPyk
+387 inittext CODE >968:/tmp/xcX5AtPyk
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -411,86 +410,86 @@ $dist/default/production/PIC16F877_RTC.X.production.obj
 RTC_GetDateTime@rtc 74 0 COMMON 1 cstackCOMMON dist/default/production/PIC16F877_RTC.X.production.obj
 ___latbits 2 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
 ___awdiv@counter 75 0 COMMON 1 cstackCOMMON dist/default/production/PIC16F877_RTC.X.production.obj
-vDisplay@ui8First 78 0 COMMON 1 cstackCOMMON dist/default/production/PIC16F877_RTC.X.production.obj
+vDisplay@ui8First 7D 0 COMMON 1 cstackCOMMON dist/default/production/PIC16F877_RTC.X.production.obj
 __LdataBANK0 0 0 ABS 0 dataBANK0 -
 __Hspace_0 2009 0 ABS 0 - -
-__Hspace_1 7C 0 ABS 0 - -
+__Hspace_1 7E 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __HidataBANK0 0 0 ABS 0 idataBANK0 -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 _BF 4A0 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
-__end_of_I2C_Start 69A 0 CODE 0 text15 dist/default/production/PIC16F877_RTC.X.production.obj
-__end_of_I2C_Write 71C 0 CODE 0 text13 dist/default/production/PIC16F877_RTC.X.production.obj
+__end_of_I2C_Start 62E 0 CODE 0 text15 dist/default/production/PIC16F877_RTC.X.production.obj
+__end_of_I2C_Write 6B0 0 CODE 0 text13 dist/default/production/PIC16F877_RTC.X.production.obj
 __Hstrings 0 0 ABS 0 strings -
 _IOCB 96 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
 _RCEN 48B 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
 _RSEN 489 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
-___sp 0 0 STACK 2 stack /tmp/xcXK2nGro.obj
-_main C86 0 CODE 0 maintext dist/default/production/PIC16F877_RTC.X.production.obj
+___sp 0 0 STACK 2 stack /tmp/xcX1ZPint.obj
+_main C1A 0 CODE 0 maintext dist/default/production/PIC16F877_RTC.X.production.obj
 __size_of_I2C_Start 0 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
 btemp 7E 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
 __size_of_I2C_Write 0 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
-start 0 0 CODE 0 init /tmp/xcXK2nGro.obj
+start 0 0 CODE 0 init /tmp/xcX1ZPint.obj
 __size_of___awdiv 0 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
 __size_of___awmod 0 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
 __CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
 __size_of_main 0 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
 _OPTION_REGbits 81 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
-__end_of_ui8Hex2DECDisplay 7D0 0 CODE 0 text4 dist/default/production/PIC16F877_RTC.X.production.obj
+__end_of_ui8Hex2DECDisplay 764 0 CODE 0 text4 dist/default/production/PIC16F877_RTC.X.production.obj
 __size_of_I2C_Init 0 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
 __size_of_I2C_Read 0 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
 __size_of_I2C_Stop 0 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
 __LidataBANK0 0 0 ABS 0 idataBANK0 -
-_I2C_Start 68E 0 CODE 0 text15 dist/default/production/PIC16F877_RTC.X.production.obj
+_I2C_Start 622 0 CODE 0 text15 dist/default/production/PIC16F877_RTC.X.production.obj
 __Hpowerup 0 0 CODE 0 powerup -
-_I2C_Write 702 0 CODE 0 text13 dist/default/production/PIC16F877_RTC.X.production.obj
+_I2C_Write 696 0 CODE 0 text13 dist/default/production/PIC16F877_RTC.X.production.obj
 ___awmod@sign 76 0 COMMON 1 cstackCOMMON dist/default/production/PIC16F877_RTC.X.production.obj
-vDisplay@ui8Fourth 76 0 COMMON 1 cstackCOMMON dist/default/production/PIC16F877_RTC.X.production.obj
-intlevel0 0 0 ENTRY 0 functab /tmp/xcXK2nGro.obj
-intlevel1 0 0 ENTRY 0 functab /tmp/xcXK2nGro.obj
-intlevel2 0 0 ENTRY 0 functab /tmp/xcXK2nGro.obj
-intlevel3 0 0 ENTRY 0 functab /tmp/xcXK2nGro.obj
-intlevel4 0 0 ENTRY 0 functab /tmp/xcXK2nGro.obj
-intlevel5 0 0 ENTRY 0 functab /tmp/xcXK2nGro.obj
+vDisplay@ui8Fourth 7B 0 COMMON 1 cstackCOMMON dist/default/production/PIC16F877_RTC.X.production.obj
+intlevel0 0 0 ENTRY 0 functab /tmp/xcX1ZPint.obj
+intlevel1 0 0 ENTRY 0 functab /tmp/xcX1ZPint.obj
+intlevel2 0 0 ENTRY 0 functab /tmp/xcX1ZPint.obj
+intlevel3 0 0 ENTRY 0 functab /tmp/xcX1ZPint.obj
+intlevel4 0 0 ENTRY 0 functab /tmp/xcX1ZPint.obj
+intlevel5 0 0 ENTRY 0 functab /tmp/xcX1ZPint.obj
 ___bmul@multiplicand 70 0 COMMON 1 cstackCOMMON dist/default/production/PIC16F877_RTC.X.production.obj
 wtemp0 7E 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
 __Hfunctab 0 0 ENTRY 0 functab -
 ___awdiv@sign 76 0 COMMON 1 cstackCOMMON dist/default/production/PIC16F877_RTC.X.production.obj
 __Hclrtext 0 0 ABS 0 clrtext -
-vDisplay@ui8Thrd 75 0 COMMON 1 cstackCOMMON dist/default/production/PIC16F877_RTC.X.production.obj
+vDisplay@ui8Thrd 7A 0 COMMON 1 cstackCOMMON dist/default/production/PIC16F877_RTC.X.production.obj
 ___awdiv@dividend 72 0 COMMON 1 cstackCOMMON dist/default/production/PIC16F877_RTC.X.production.obj
-__end_of_RTC_GetDateTime C86 0 CODE 0 text12 dist/default/production/PIC16F877_RTC.X.production.obj
-_i2c_Ack 6A6 0 CODE 0 text19 dist/default/production/PIC16F877_RTC.X.production.obj
-_I2C_Init 71C 0 CODE 0 text11 dist/default/production/PIC16F877_RTC.X.production.obj
-_I2C_Read 7D0 0 CODE 0 text16 dist/default/production/PIC16F877_RTC.X.production.obj
-_I2C_Stop 69A 0 CODE 0 text14 dist/default/production/PIC16F877_RTC.X.production.obj
+__end_of_RTC_GetDateTime C1A 0 CODE 0 text12 dist/default/production/PIC16F877_RTC.X.production.obj
+_i2c_Ack 63A 0 CODE 0 text19 dist/default/production/PIC16F877_RTC.X.production.obj
+_I2C_Init 6B0 0 CODE 0 text11 dist/default/production/PIC16F877_RTC.X.production.obj
+_I2C_Read 764 0 CODE 0 text16 dist/default/production/PIC16F877_RTC.X.production.obj
+_I2C_Stop 62E 0 CODE 0 text14 dist/default/production/PIC16F877_RTC.X.production.obj
 I2C_Read@v_ackOption_u8 71 0 COMMON 1 cstackCOMMON dist/default/production/PIC16F877_RTC.X.production.obj
-__end_of___bmul 75A 0 CODE 0 text5 dist/default/production/PIC16F877_RTC.X.production.obj
-__end_of_i2c_NoAck 6C2 0 CODE 0 text18 dist/default/production/PIC16F877_RTC.X.production.obj
-main@rtc 2E 0 BANK0 1 cstackBANK0 dist/default/production/PIC16F877_RTC.X.production.obj
-vDisplay@ui8Second 74 0 COMMON 1 cstackCOMMON dist/default/production/PIC16F877_RTC.X.production.obj
+__end_of___bmul 6EE 0 CODE 0 text5 dist/default/production/PIC16F877_RTC.X.production.obj
+__end_of_i2c_NoAck 656 0 CODE 0 text18 dist/default/production/PIC16F877_RTC.X.production.obj
+main@rtc 31 0 BANK0 1 cstackBANK0 dist/default/production/PIC16F877_RTC.X.production.obj
+vDisplay@ui8Second 79 0 COMMON 1 cstackCOMMON dist/default/production/PIC16F877_RTC.X.production.obj
 __Lmaintext 0 0 ABS 0 maintext -
 __size_of_i2c_NoAck 0 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
 ui8Dec2HexDisplay@ui8Output 20 0 BANK0 1 cstackBANK0 dist/default/production/PIC16F877_RTC.X.production.obj
-__end_of_I2C_Init 738 0 CODE 0 text11 dist/default/production/PIC16F877_RTC.X.production.obj
-__end_of_I2C_Read 810 0 CODE 0 text16 dist/default/production/PIC16F877_RTC.X.production.obj
-__end_of_I2C_Stop 6A6 0 CODE 0 text14 dist/default/production/PIC16F877_RTC.X.production.obj
+__end_of_I2C_Init 6CC 0 CODE 0 text11 dist/default/production/PIC16F877_RTC.X.production.obj
+__end_of_I2C_Read 7A4 0 CODE 0 text16 dist/default/production/PIC16F877_RTC.X.production.obj
+__end_of_I2C_Stop 63A 0 CODE 0 text14 dist/default/production/PIC16F877_RTC.X.production.obj
 ___bmul@multiplier 73 0 COMMON 1 cstackCOMMON dist/default/production/PIC16F877_RTC.X.production.obj
 ___awdiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production/PIC16F877_RTC.X.production.obj
-__end_of___awdiv A0C 0 CODE 0 text8 dist/default/production/PIC16F877_RTC.X.production.obj
-__end_of___awmod 95A 0 CODE 0 text7 dist/default/production/PIC16F877_RTC.X.production.obj
+__end_of___awdiv 9A0 0 CODE 0 text8 dist/default/production/PIC16F877_RTC.X.production.obj
+__end_of___awmod 8EE 0 CODE 0 text7 dist/default/production/PIC16F877_RTC.X.production.obj
 __size_of_DELAY_ms 0 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
 __size_of_DELAY_us 0 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
-_ui8Hex2DECDisplay 7A4 0 CODE 0 text4 dist/default/production/PIC16F877_RTC.X.production.obj
-_i2c_NoAck 6B4 0 CODE 0 text18 dist/default/production/PIC16F877_RTC.X.production.obj
+_ui8Hex2DECDisplay 738 0 CODE 0 text4 dist/default/production/PIC16F877_RTC.X.production.obj
+_i2c_NoAck 648 0 CODE 0 text18 dist/default/production/PIC16F877_RTC.X.production.obj
 _WPUBbits 95 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
 start_initialization FE0 0 CODE 0 cinit dist/default/production/PIC16F877_RTC.X.production.obj
-_RTC_GetDateTime B88 0 CODE 0 text12 dist/default/production/PIC16F877_RTC.X.production.obj
+_RTC_GetDateTime B1C 0 CODE 0 text12 dist/default/production/PIC16F877_RTC.X.production.obj
 _TRISBbits 86 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
 _TRISCbits 87 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
 _TRISEbits 89 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
-__end_of_i2c_WaitForIdle 6EC 0 CODE 0 text17 dist/default/production/PIC16F877_RTC.X.production.obj
+__end_of_i2c_WaitForIdle 680 0 CODE 0 text17 dist/default/production/PIC16F877_RTC.X.production.obj
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production/PIC16F877_RTC.X.production.obj
 _SSPADD 93 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
 _SSPBUF 13 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
@@ -500,9 +499,9 @@ _TRISC4 43C 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
 DELAY_us@us_count 70 0 COMMON 1 cstackCOMMON dist/default/production/PIC16F877_RTC.X.production.obj
 ui8Hex2DECDisplay@ui8Temp 76 0 COMMON 1 cstackCOMMON dist/default/production/PIC16F877_RTC.X.production.obj
 __size_of_vDisplay 0 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
-_DELAY_ms 77C 0 CODE 0 text2 dist/default/production/PIC16F877_RTC.X.production.obj
-_DELAY_us 6EC 0 CODE 0 text3 dist/default/production/PIC16F877_RTC.X.production.obj
-___int_sp 0 0 STACK 2 stack /tmp/xcXK2nGro.obj
+_DELAY_ms 710 0 CODE 0 text2 dist/default/production/PIC16F877_RTC.X.production.obj
+_DELAY_us 680 0 CODE 0 text3 dist/default/production/PIC16F877_RTC.X.production.obj
+___int_sp 0 0 STACK 2 stack /tmp/xcX1ZPint.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -510,8 +509,8 @@ __Hbank3 0 0 ABS 0 bank3 -
 __Hcinit 1000 0 CODE 0 cinit -
 __Hidloc 0 0 IDLOC 0 idloc -
 __Hstack 0 0 STACK 2 stack -
-__end_of_DELAY_ms 7A4 0 CODE 0 text2 dist/default/production/PIC16F877_RTC.X.production.obj
-__end_of_DELAY_us 702 0 CODE 0 text3 dist/default/production/PIC16F877_RTC.X.production.obj
+__end_of_DELAY_ms 738 0 CODE 0 text2 dist/default/production/PIC16F877_RTC.X.production.obj
+__end_of_DELAY_us 696 0 CODE 0 text3 dist/default/production/PIC16F877_RTC.X.production.obj
 __Hmaintext 0 0 ABS 0 maintext -
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 4012 0 CONFIG 0 config -
@@ -523,11 +522,11 @@ __Lcinit FE0 0 CODE 0 cinit -
 __Lidloc 0 0 IDLOC 0 idloc -
 ui8Dec2HexDisplay@ui8Temp 22 0 BANK0 1 cstackBANK0 dist/default/production/PIC16F877_RTC.X.production.obj
 __Lstack 0 0 STACK 2 stack -
-_i2c_WaitForIdle 6D6 0 CODE 0 text17 dist/default/production/PIC16F877_RTC.X.production.obj
+_i2c_WaitForIdle 66A 0 CODE 0 text17 dist/default/production/PIC16F877_RTC.X.production.obj
 __size_of_ui8Dec2HexDisplay 0 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
 __Linittext 0 0 ABS 0 inittext -
 _PORTBbits 6 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
-__end_of_RTC_SetDateTime AC0 0 CODE 0 text9 dist/default/production/PIC16F877_RTC.X.production.obj
+__end_of_RTC_SetDateTime A54 0 CODE 0 text9 dist/default/production/PIC16F877_RTC.X.production.obj
 _PORTCbits 7 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
@@ -545,43 +544,43 @@ __Lsfr1 0 0 ABS 0 sfr1 -
 __Lsfr2 0 0 ABS 0 sfr2 -
 __Lsfr3 0 0 ABS 0 sfr3 -
 __Ltext 0 0 ABS 0 text -
-___bmul 738 0 CODE 0 text5 dist/default/production/PIC16F877_RTC.X.production.obj
+___bmul 6CC 0 CODE 0 text5 dist/default/production/PIC16F877_RTC.X.production.obj
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 _PEN 48A 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
 _R_W 4A2 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
 _SEN 488 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
 __S0 2009 0 ABS 0 - -
-__S1 7C 0 ABS 0 - -
+__S1 7E 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_vDisplay AC0 0 CODE 0 text1 dist/default/production/PIC16F877_RTC.X.production.obj
+_vDisplay A54 0 CODE 0 text1 dist/default/production/PIC16F877_RTC.X.production.obj
 __size_of_RTC_GetDateTime 0 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
-__end_of_vDisplay B88 0 CODE 0 text1 dist/default/production/PIC16F877_RTC.X.production.obj
+__end_of_vDisplay B1C 0 CODE 0 text1 dist/default/production/PIC16F877_RTC.X.production.obj
 ui8Hex2DECDisplay@ui8Input 77 0 COMMON 1 cstackCOMMON dist/default/production/PIC16F877_RTC.X.production.obj
 __Lintentry 0 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec /tmp/xcXK2nGro.obj
-__pdataBANK0 35 0 BANK0 1 dataBANK0 dist/default/production/PIC16F877_RTC.X.production.obj
-_RTC_SetDateTime A0C 0 CODE 0 text9 dist/default/production/PIC16F877_RTC.X.production.obj
+reset_vec 0 0 CODE 0 reset_vec /tmp/xcX1ZPint.obj
+__pdataBANK0 38 0 BANK0 1 dataBANK0 dist/default/production/PIC16F877_RTC.X.production.obj
+_RTC_SetDateTime 9A0 0 CODE 0 text9 dist/default/production/PIC16F877_RTC.X.production.obj
 __size_of___bmul 0 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
-main@ui8SetValue 2D 0 BANK0 1 cstackBANK0 dist/default/production/PIC16F877_RTC.X.production.obj
+main@ui8SetValue 2F 0 BANK0 1 cstackBANK0 dist/default/production/PIC16F877_RTC.X.production.obj
 ___awmod@counter 75 0 COMMON 1 cstackCOMMON dist/default/production/PIC16F877_RTC.X.production.obj
-main@ucHours 29 0 BANK0 1 cstackBANK0 dist/default/production/PIC16F877_RTC.X.production.obj
-main@ucMonth 2B 0 BANK0 1 cstackBANK0 dist/default/production/PIC16F877_RTC.X.production.obj
+main@ucHours 2B 0 BANK0 1 cstackBANK0 dist/default/production/PIC16F877_RTC.X.production.obj
+main@ucMonth 2D 0 BANK0 1 cstackBANK0 dist/default/production/PIC16F877_RTC.X.production.obj
 I2C_Write@v_i2cData_u8 70 0 COMMON 1 cstackCOMMON dist/default/production/PIC16F877_RTC.X.production.obj
-__ptext10 810 0 CODE 0 text10 dist/default/production/PIC16F877_RTC.X.production.obj
-__ptext11 71C 0 CODE 0 text11 dist/default/production/PIC16F877_RTC.X.production.obj
-__ptext12 B88 0 CODE 0 text12 dist/default/production/PIC16F877_RTC.X.production.obj
-__ptext13 702 0 CODE 0 text13 dist/default/production/PIC16F877_RTC.X.production.obj
-__ptext14 69A 0 CODE 0 text14 dist/default/production/PIC16F877_RTC.X.production.obj
-__ptext15 68E 0 CODE 0 text15 dist/default/production/PIC16F877_RTC.X.production.obj
-__ptext16 7D0 0 CODE 0 text16 dist/default/production/PIC16F877_RTC.X.production.obj
-__ptext17 6D6 0 CODE 0 text17 dist/default/production/PIC16F877_RTC.X.production.obj
-__ptext18 6B4 0 CODE 0 text18 dist/default/production/PIC16F877_RTC.X.production.obj
-__ptext19 6A6 0 CODE 0 text19 dist/default/production/PIC16F877_RTC.X.production.obj
-___awdiv 95A 0 CODE 0 text8 dist/default/production/PIC16F877_RTC.X.production.obj
-___awmod 8C4 0 CODE 0 text7 dist/default/production/PIC16F877_RTC.X.production.obj
-__pmaintext C86 0 CODE 0 maintext dist/default/production/PIC16F877_RTC.X.production.obj
+__ptext10 7A4 0 CODE 0 text10 dist/default/production/PIC16F877_RTC.X.production.obj
+__ptext11 6B0 0 CODE 0 text11 dist/default/production/PIC16F877_RTC.X.production.obj
+__ptext12 B1C 0 CODE 0 text12 dist/default/production/PIC16F877_RTC.X.production.obj
+__ptext13 696 0 CODE 0 text13 dist/default/production/PIC16F877_RTC.X.production.obj
+__ptext14 62E 0 CODE 0 text14 dist/default/production/PIC16F877_RTC.X.production.obj
+__ptext15 622 0 CODE 0 text15 dist/default/production/PIC16F877_RTC.X.production.obj
+__ptext16 764 0 CODE 0 text16 dist/default/production/PIC16F877_RTC.X.production.obj
+__ptext17 66A 0 CODE 0 text17 dist/default/production/PIC16F877_RTC.X.production.obj
+__ptext18 648 0 CODE 0 text18 dist/default/production/PIC16F877_RTC.X.production.obj
+__ptext19 63A 0 CODE 0 text19 dist/default/production/PIC16F877_RTC.X.production.obj
+___awdiv 8EE 0 CODE 0 text8 dist/default/production/PIC16F877_RTC.X.production.obj
+___awmod 858 0 CODE 0 text7 dist/default/production/PIC16F877_RTC.X.production.obj
+__pmaintext C1A 0 CODE 0 maintext dist/default/production/PIC16F877_RTC.X.production.obj
 __size_of_RTC_Init 0 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 400E 0 CONFIG 0 config -
@@ -590,44 +589,44 @@ __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.ob
 __size_of_i2c_WaitForIdle 0 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
 __Hinittext 0 0 ABS 0 inittext -
 RTC_SetDateTime@rtc 71 0 COMMON 1 cstackCOMMON dist/default/production/PIC16F877_RTC.X.production.obj
-main@ucMin 28 0 BANK0 1 cstackBANK0 dist/default/production/PIC16F877_RTC.X.production.obj
-main@ucSec 27 0 BANK0 1 cstackBANK0 dist/default/production/PIC16F877_RTC.X.production.obj
+main@ucMin 2A 0 BANK0 1 cstackBANK0 dist/default/production/PIC16F877_RTC.X.production.obj
+main@ucSec 2E 0 BANK0 1 cstackBANK0 dist/default/production/PIC16F877_RTC.X.production.obj
 __size_of_i2c_Ack 0 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
-stackhi 0 0 ABS 0 - /tmp/xcXK2nGro.obj
-stacklo 0 0 ABS 0 - /tmp/xcXK2nGro.obj
-__end_of_ui8Dec2HexDisplay 8C4 0 CODE 0 text6 dist/default/production/PIC16F877_RTC.X.production.obj
+stackhi 0 0 ABS 0 - /tmp/xcX1ZPint.obj
+stacklo 0 0 ABS 0 - /tmp/xcX1ZPint.obj
+__end_of_ui8Dec2HexDisplay 858 0 CODE 0 text6 dist/default/production/PIC16F877_RTC.X.production.obj
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
 ui8Dec2HexDisplay@ui8Input 21 0 BANK0 1 cstackBANK0 dist/default/production/PIC16F877_RTC.X.production.obj
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
-init_fetch0 75A 0 CODE 0 inittext dist/default/production/PIC16F877_RTC.X.production.obj
+init_fetch0 6EE 0 CODE 0 inittext dist/default/production/PIC16F877_RTC.X.production.obj
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
-main@ui8SetMode 2C 0 BANK0 1 cstackBANK0 dist/default/production/PIC16F877_RTC.X.production.obj
+main@ui8SetMode 30 0 BANK0 1 cstackBANK0 dist/default/production/PIC16F877_RTC.X.production.obj
 __Lend_init 0 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 end_of_initialization FF8 0 CODE 0 cinit dist/default/production/PIC16F877_RTC.X.production.obj
 __Hintentry 0 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
-_RTC_Init 810 0 CODE 0 text10 dist/default/production/PIC16F877_RTC.X.production.obj
+_RTC_Init 7A4 0 CODE 0 text10 dist/default/production/PIC16F877_RTC.X.production.obj
 ___awdiv@quotient 77 0 COMMON 1 cstackCOMMON dist/default/production/PIC16F877_RTC.X.production.obj
 ?___awdiv 70 0 COMMON 1 cstackCOMMON dist/default/production/PIC16F877_RTC.X.production.obj
 ?___awmod 70 0 COMMON 1 cstackCOMMON dist/default/production/PIC16F877_RTC.X.production.obj
 __Hreset_vec 0 0 CODE 0 reset_vec -
 ___awmod@dividend 72 0 COMMON 1 cstackCOMMON dist/default/production/PIC16F877_RTC.X.production.obj
 __size_of_RTC_SetDateTime 0 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
-__end_of_RTC_Init 850 0 CODE 0 text10 dist/default/production/PIC16F877_RTC.X.production.obj
-__ptext1 AC0 0 CODE 0 text1 dist/default/production/PIC16F877_RTC.X.production.obj
-__ptext2 77C 0 CODE 0 text2 dist/default/production/PIC16F877_RTC.X.production.obj
-__ptext3 6EC 0 CODE 0 text3 dist/default/production/PIC16F877_RTC.X.production.obj
-__ptext4 7A4 0 CODE 0 text4 dist/default/production/PIC16F877_RTC.X.production.obj
-__ptext5 738 0 CODE 0 text5 dist/default/production/PIC16F877_RTC.X.production.obj
-__ptext6 850 0 CODE 0 text6 dist/default/production/PIC16F877_RTC.X.production.obj
-__ptext7 8C4 0 CODE 0 text7 dist/default/production/PIC16F877_RTC.X.production.obj
-__ptext8 95A 0 CODE 0 text8 dist/default/production/PIC16F877_RTC.X.production.obj
-__ptext9 A0C 0 CODE 0 text9 dist/default/production/PIC16F877_RTC.X.production.obj
-_ucBCD_ARR 35 0 BANK0 1 dataBANK0 dist/default/production/PIC16F877_RTC.X.production.obj
+__end_of_RTC_Init 7E4 0 CODE 0 text10 dist/default/production/PIC16F877_RTC.X.production.obj
+__ptext1 A54 0 CODE 0 text1 dist/default/production/PIC16F877_RTC.X.production.obj
+__ptext2 710 0 CODE 0 text2 dist/default/production/PIC16F877_RTC.X.production.obj
+__ptext3 680 0 CODE 0 text3 dist/default/production/PIC16F877_RTC.X.production.obj
+__ptext4 738 0 CODE 0 text4 dist/default/production/PIC16F877_RTC.X.production.obj
+__ptext5 6CC 0 CODE 0 text5 dist/default/production/PIC16F877_RTC.X.production.obj
+__ptext6 7E4 0 CODE 0 text6 dist/default/production/PIC16F877_RTC.X.production.obj
+__ptext7 858 0 CODE 0 text7 dist/default/production/PIC16F877_RTC.X.production.obj
+__ptext8 8EE 0 CODE 0 text8 dist/default/production/PIC16F877_RTC.X.production.obj
+__ptext9 9A0 0 CODE 0 text9 dist/default/production/PIC16F877_RTC.X.production.obj
+_ucBCD_ARR 38 0 BANK0 1 dataBANK0 dist/default/production/PIC16F877_RTC.X.production.obj
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
@@ -636,18 +635,18 @@ DELAY_ms@ms_count 72 0 COMMON 1 cstackCOMMON dist/default/production/PIC16F877_R
 __end_of__initialization FF8 0 CODE 0 cinit dist/default/production/PIC16F877_RTC.X.production.obj
 ___awmod@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production/PIC16F877_RTC.X.production.obj
 __Lfunctab 0 0 ENTRY 0 functab -
-__end_of_i2c_Ack 6B4 0 CODE 0 text19 dist/default/production/PIC16F877_RTC.X.production.obj
-__pidataBANK0 6C2 0 CODE 0 idataBANK0 dist/default/production/PIC16F877_RTC.X.production.obj
+__end_of_i2c_Ack 648 0 CODE 0 text19 dist/default/production/PIC16F877_RTC.X.production.obj
+__pidataBANK0 656 0 CODE 0 idataBANK0 dist/default/production/PIC16F877_RTC.X.production.obj
 __size_of_ui8Hex2DECDisplay 0 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
 __Lclrtext 0 0 ABS 0 clrtext -
-main@ucDate 2A 0 BANK0 1 cstackBANK0 dist/default/production/PIC16F877_RTC.X.production.obj
-main@ucYear 26 0 BANK0 1 cstackBANK0 dist/default/production/PIC16F877_RTC.X.production.obj
-_ui8Dec2HexDisplay 850 0 CODE 0 text6 dist/default/production/PIC16F877_RTC.X.production.obj
+main@ucDate 2C 0 BANK0 1 cstackBANK0 dist/default/production/PIC16F877_RTC.X.production.obj
+main@ucYear 29 0 BANK0 1 cstackBANK0 dist/default/production/PIC16F877_RTC.X.production.obj
+_ui8Dec2HexDisplay 7E4 0 CODE 0 text6 dist/default/production/PIC16F877_RTC.X.production.obj
 _ANSELbits 188 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production/PIC16F877_RTC.X.production.obj
 _SSPSTAT 94 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
 __Hend_init 6 0 CODE 0 end_init -
-init_ram0 762 0 CODE 0 inittext dist/default/production/PIC16F877_RTC.X.production.obj
+init_ram0 6F6 0 CODE 0 inittext dist/default/production/PIC16F877_RTC.X.production.obj
 I2C_Read@v_i2cData_u8 72 0 COMMON 1 cstackCOMMON dist/default/production/PIC16F877_RTC.X.production.obj
 __end_of_main FE0 0 CODE 0 maintext dist/default/production/PIC16F877_RTC.X.production.obj
 _ACKDT 48D 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
@@ -690,29 +689,29 @@ _ANSELHbits 189 0 ABS 0 - dist/default/production/PIC16F877_RTC.X.production.obj
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cinit 0 7F0 FE0 10 2
-text1 0 560 AC0 64 2
-text2 0 3BE 77C 14 2
-text3 0 376 6EC B 2
-text4 0 3D2 7A4 16 2
-text5 0 39C 738 11 2
-text6 0 428 850 3A 2
-text7 0 462 8C4 4B 2
-text8 0 4AD 95A 59 2
-text9 0 506 A0C 5A 2
-text10 0 408 810 20 2
-text11 0 38E 71C E 2
-text12 0 5C4 B88 7F 2
-text13 0 381 702 D 2
-text14 0 34D 69A 6 2
-text15 0 347 68E 6 2
-text16 0 3E8 7D0 20 2
-text17 0 36B 6D6 B 2
-text18 0 35A 6B4 7 2
-text19 0 353 6A6 7 2
-maintext 0 643 C86 1AD 2
-cstackCOMMON 1 70 70 C 1
-cstackBANK0 1 20 20 1F 1
-inittext 0 3AD 75A 11 2
+text1 0 52A A54 64 2
+text2 0 388 710 14 2
+text3 0 340 680 B 2
+text4 0 39C 738 16 2
+text5 0 366 6CC 11 2
+text6 0 3F2 7E4 3A 2
+text7 0 42C 858 4B 2
+text8 0 477 8EE 59 2
+text9 0 4D0 9A0 5A 2
+text10 0 3D2 7A4 20 2
+text11 0 358 6B0 E 2
+text12 0 58E B1C 7F 2
+text13 0 34B 696 D 2
+text14 0 317 62E 6 2
+text15 0 311 622 6 2
+text16 0 3B2 764 20 2
+text17 0 335 66A B 2
+text18 0 324 648 7 2
+text19 0 31D 63A 7 2
+maintext 0 60D C1A 1E3 2
+cstackCOMMON 1 70 70 E 1
+cstackBANK0 1 20 20 22 1
+inittext 0 377 6EE 11 2
 reset_vec 0 0 0 3 2
-idataBANK0 0 361 6C2 A 2
+idataBANK0 0 32B 656 A 2
 config 0 2007 400E 2 2
